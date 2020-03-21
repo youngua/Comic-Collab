@@ -4,17 +4,53 @@
     padding: 0;
 }
 
-h1 {
-    font-size: 30px;
-}
-
 p {
     font-size: 16px;
 }
 
+h1 { 
+    font-size: 45px;
+    display: block;
+    float: left;
+    text-transform: uppercase;
+    color: white;
+}
+
+h1.right {
+    float: right;
+    margin-right: 1.5%;
+}
+
+h2 {
+    display: block;
+    float: left;
+}
+
+h2.right {
+    float: right;
+    margin-right: 4%;
+}
+
+h3 {
+    padding-top: 4%;
+}
+
+.artwork {
+    width: 100%;
+}
+
+.avatar {
+    width: 25%;
+}
+
+.artist-blurb {
+    position: relative;
+    bottom: -40%;
+}
+
 /* ---------------------- Slides ---------------------- */
 .mySlides {
-    margin: auto 4% auto 4%;
+    margin: 4% 4% auto 4%;
     /* display: none; */
 }
 
@@ -22,14 +58,17 @@ p {
 
 .button {
     position: fixed;
-    background-color: grey;
-    color: white;
+    background-color: lightgray;
+    color: black;
     padding: 1.6%;
     border: none;
     text-decoration: none;
     cursor: pointer;
     font-size: 24px;
     height: 100%;
+    top: 0;
+    z-index: 1;
+    outline: 1px black solid;
 }
 
 .display-left {
@@ -39,78 +78,95 @@ p {
 .display-right {
    right: 0;
 }
-
 /* ---------------------- LARGE SCREENS---------------------- */
 @media screen and (min-width: 1000px) {
-   
-/* ---------------------- Homepage page ---------------------- */
-.home-page {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr 0;
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-}
 
-.hero-cover { 
-    grid-area: 1 / 1 / 2 / 2; 
-    outline: 1px blue solid;
-    margin-right: 1px;
-}
-
-/* ---------------------- Artist page ---------------------- */
-.artist-page {
-    display: grid;
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: repeat(2, 1fr);
-    grid-column-gap: 0px;
-    grid-row-gap: 0px;
-    outline: 1px blue solid;
-}
-
-.info-panel {
-    padding: 6%;
-    /* grid-area - shorthand for - grid-row-start + grid-column-start + grid-row-end + grid-column-end: */
-    grid-area: 1 / 2 / 3 / 3;
-    outline: 1px blue solid;
-}
-
-.info-panel img {
-    width: 45%;
-}
-
-.artwork {
+header {
+    background-color: #EAD814;
+    margin-left: 4%;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: -2px;
+    right: -2px;
     padding: 2%;
-    grid-area: 1 / 1 / 2 / 2;
+    outline: 1px black solid;
 }
 
-.artwork img {
-    height: 100%;
+.container {
+    display: grid;
+
+    grid-template-areas:
+    "main-one info"
+    "main-two main-two"
+    "main-three main-three"
+    "main-four main-four";
+
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr auto auto auto;
+    grid-gap: 0;
+
+    height: 100vh;
 }
 
-.artist-social {
-    grid-area: 2 / 1 / 3 / 2;
-    padding: 2px;
-    border-top: 1px blue solid;
+main-one {
+    grid-area: main-one;
+    height: 82vh;
 }
 
-.artist-social iframe {
-    height: 92%;
-    width: 94%;
-    border: 1px blue solid;
-    margin: 2% auto 2% 2%;
-    padding: 1%;
+info {
+    grid-area: info;
+
+    padding: 8% 4%;
+    background: lightgrey;
+    outline: 1px black solid;
 }
 
-/* two artist collab on one comic */
-.artist-social .social-half {
-    width: 44.5%;
-    height: 90.5%;
+main-two {
+    grid-area: main-two;
+    background: black;
+    padding: 2%;
 }
+
+main-three {
+    grid-area: main-three;
+    height: 80vh;
+}
+
+main-four {
+    grid-area: main-four;
+    height: 92vh;
+    background-color: black;
+}
+
+.colophon {
+    padding-top: 2%;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+}
+
 }
 
 /* ---------------------- SMALL SCREENS---------------------- */
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     /* iPhone X */
 
+    .container {
+        grid-template-areas:
+          "main-one"
+          "info"
+          "main-two"
+          "main-three";
+    
+        grid-template-columns: 1fr;
+        grid-template-rows:
+          auto /* main-one */
+          auto
+          auto
+          auto
+          auto;
+      }
 }
