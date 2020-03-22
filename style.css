@@ -3,6 +3,10 @@
     margin: 0;
     padding: 0;
 }
+/* 
+body {
+    background-color: black;
+} */
 
 p {
     font-size: 16px;
@@ -32,11 +36,7 @@ h2.right {
 }
 
 h3 {
-    padding-top: 4%;
-}
-
-.artwork {
-    width: 100%;
+   font-size: 30px;
 }
 
 .avatar {
@@ -45,12 +45,12 @@ h3 {
 
 .artist-blurb {
     position: relative;
-    bottom: -40%;
+    bottom: -50%;
 }
 
 /* ---------------------- Slides ---------------------- */
 .mySlides {
-    margin: 4% 4% auto 4%;
+    margin: 5.7% 4% auto 4%;
     /* display: none; */
 }
 
@@ -67,7 +67,7 @@ h3 {
     font-size: 24px;
     height: 100%;
     top: 0;
-    z-index: 1;
+    z-index: 2;
     outline: 1px black solid;
 }
 
@@ -91,6 +91,7 @@ header {
     right: -2px;
     padding: 2%;
     outline: 1px black solid;
+    z-index: 1;
 }
 
 .container {
@@ -102,16 +103,9 @@ header {
     "main-three main-three"
     "main-four main-four";
 
-    grid-template-columns: 3fr 1fr;
-    grid-template-rows: 1fr auto auto auto;
+    grid-template-columns: 3fr 440px;
+    grid-template-rows: auto;
     grid-gap: 0;
-
-    height: 100vh;
-}
-
-main-one {
-    grid-area: main-one;
-    height: 82vh;
 }
 
 info {
@@ -120,19 +114,34 @@ info {
     padding: 8% 4%;
     background: lightgrey;
     outline: 1px black solid;
+    height: 73.6vh;
 }
 
+/* ----- Artwork ----- */
+main-one {
+    grid-area: main-one;
+    height: 80vh;
+    background-color: black;
+}
+
+.artwork {
+    width: 66.5vw;
+}
+
+/* ----- Artist Name ----- */
 main-two {
     grid-area: main-two;
     background: black;
     padding: 2%;
 }
 
+/* ----- Collaborators or Artist's Social ----- */
 main-three {
     grid-area: main-three;
     height: 80vh;
 }
 
+/* ----- Colophon ----- */
 main-four {
     grid-area: main-four;
     height: 92vh;
@@ -146,6 +155,7 @@ main-four {
 iframe {
     width: 100%;
     height: 80vh;
+    border: none;
 }
 
 }
