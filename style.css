@@ -103,7 +103,7 @@ header {
     "main-three main-three"
     "main-four main-four";
 
-    grid-template-columns: 3fr 440px;
+    grid-template-columns: 3fr 445px;
     grid-template-rows: auto;
     grid-gap: 0;
 }
@@ -125,7 +125,7 @@ main-one {
 }
 
 .artwork {
-    width: 66.5vw;
+    width: 65.5vw;
 }
 
 /* ----- Artist Name ----- */
