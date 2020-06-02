@@ -2,11 +2,8 @@
 * {
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
-/* 
-body {
-    background-color: black;
-} */
 
 p {
     font-size: 1.3em;
@@ -24,7 +21,6 @@ h1 {
 
 h1.right {
     float: right;
-    margin-right: 1.5%;
 }
 
 h2 {
@@ -39,14 +35,12 @@ h2.right {
 
 h3 {
    font-size: 30px;
-   /* padding: inherit; */
-
-   margin-bottom: 100px;
+   margin-bottom: 140px;
 }
 
 .avatar {
     width: 25%;
-    padding: inherit;
+    height: 25%;
 }
 
 /* ---------------------- Slides ---------------------- */
@@ -117,7 +111,6 @@ header {
     padding-bottom: 0;
     background: #F4F4F4;
     outline: 1px black solid;
-    /* height: 73.6vh; */
     position: relative;
 
     display: flex;
@@ -126,7 +119,7 @@ header {
 }
 
 .artist-blurb {
-    /* padding: inherit; */
+   
 }
 
 /* ----- Artwork ----- */
@@ -154,6 +147,12 @@ header {
     height: 80vh;
 }
 
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+
 /* ----- Collaborators  ----- */
 .main-four {
     grid-area: main-four;
@@ -166,7 +165,7 @@ header {
     grid-template-columns: auto auto auto;
 }
 
-.column {
+.column-item {
     padding: 4%;
 }
 
@@ -188,21 +187,59 @@ ol {
 
 /* ----- Colophon ----- */
 
-
 .main-five {
     grid-area: main-five;
-    height: 92vh;
-    background-color: black;
-}
-
-.colophon {
-    padding-top: 2%;
-}
-
-iframe {
-    width: 100%;
     height: 80vh;
-    border: none;
+    background-color: black;
+    padding: 4%;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.colophon-title {
+    margin-bottom: 17%;
+    margin-left: 83%;
+}
+
+.main-five h2,
+.main-five p  {
+    color: white;
+}
+
+.main-five h2 {
+    padding-bottom: 1.2em;
+}
+
+.main-five p {
+    line-height: .5em;
+    padding-bottom: 1em;
+    text-indent: 8%;
+}
+
+#team-title {
+    margin-left: -8%;
+}
+
+.item h2 {
+    padding-top: 8%;
+    float: none;
+}
+
+#typefaces-container {
+    margin-top: 16%;
+}
+
+#printed-container {
+    margin-top: 31%;
+}
+
+.item-container {
+    display: grid;
+    grid-column-gap: 0;
+    grid-template-columns: auto auto;
+    width: 50%;
 }
 
 }
