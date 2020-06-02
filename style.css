@@ -9,7 +9,9 @@ body {
 } */
 
 p {
-    font-size: 16px;
+    font-size: 1.3em;
+    line-height: 1.2em;
+    padding-bottom: 1.5em;
 }
 
 h1 { 
@@ -37,15 +39,14 @@ h2.right {
 
 h3 {
    font-size: 30px;
+   padding: inherit;
+
+   margin-bottom: 100px;
 }
 
 .avatar {
     width: 25%;
-}
-
-.artist-blurb {
-    position: relative;
-    bottom: -50%;
+    padding: inherit;
 }
 
 /* ---------------------- Slides ---------------------- */
@@ -58,7 +59,7 @@ h3 {
 
 .button {
     position: fixed;
-    background-color: lightgray;
+    background-color: #F4F4F4;
     color: black;
     padding: 1.6%;
     border: none;
@@ -78,7 +79,7 @@ h3 {
 .display-right {
    right: 0;
 }
-/* ---------------------- LARGE SCREENS---------------------- */
+/* ---------------------- LARGE SCREENS ---------------------- */
 @media screen and (min-width: 1000px) {
 
 header {
@@ -98,52 +99,98 @@ header {
     display: grid;
 
     grid-template-areas:
-    "main-one info"
+    "main-one aside"
     "main-two main-two"
     "main-three main-three"
-    "main-four main-four";
+    "main-four main-four"
+    "main-five main-five";
 
     grid-template-columns: 3fr 445px;
     grid-template-rows: auto;
     grid-gap: 0;
 }
 
-info {
-    grid-area: info;
-
-    padding: 8% 4%;
-    background: lightgrey;
+/* ----- Info ----- */
+.info {
+    grid-area: aside;
+    padding: 4%;
+    padding-bottom: 0;
+    background: #F4F4F4;
     outline: 1px black solid;
-    height: 73.6vh;
+    /* height: 73.6vh; */
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.artist-blurb {
+    padding: inherit;
 }
 
 /* ----- Artwork ----- */
-main-one {
+.main-one {
     grid-area: main-one;
     height: 80vh;
     background-color: black;
 }
 
 .artwork {
-    width: 65.5vw;
+    height: 100%;
+    width: 100%;
 }
 
 /* ----- Artist Name ----- */
-main-two {
+.main-two {
     grid-area: main-two;
     background: black;
     padding: 2%;
 }
 
-/* ----- Collaborators or Artist's Social ----- */
-main-three {
+/* ----- Artist's Social ----- */
+.main-three {
     grid-area: main-three;
     height: 80vh;
 }
 
-/* ----- Colophon ----- */
-main-four {
+/* ----- Collaborators  ----- */
+.main-four {
     grid-area: main-four;
+    height: 122vh;
+}
+
+.column-container {
+    display: grid;
+    grid-column-gap: 0;
+    grid-template-columns: auto auto auto;
+}
+
+.column {
+    padding: 4%;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+  }
+  ol li {
+    counter-increment: my-awesome-counter;
+    padding: 4%;
+  }
+
+  ol li::before {
+    content: counter(my-awesome-counter) " ";
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    padding-right: 4%;
+  }
+
+/* ----- Colophon ----- */
+
+
+.main-five {
+    grid-area: main-five;
     height: 92vh;
     background-color: black;
 }
