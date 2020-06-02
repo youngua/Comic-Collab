@@ -39,7 +39,7 @@ h2.right {
 
 h3 {
    font-size: 30px;
-   padding: inherit;
+   /* padding: inherit; */
 
    margin-bottom: 100px;
 }
@@ -113,7 +113,7 @@ header {
 /* ----- Info ----- */
 .info {
     grid-area: aside;
-    padding: 4%;
+    padding: 8%;
     padding-bottom: 0;
     background: #F4F4F4;
     outline: 1px black solid;
@@ -126,13 +126,13 @@ header {
 }
 
 .artist-blurb {
-    padding: inherit;
+    /* padding: inherit; */
 }
 
 /* ----- Artwork ----- */
 .main-one {
     grid-area: main-one;
-    height: 80vh;
+    height: 100%;
     background-color: black;
 }
 
@@ -157,7 +157,7 @@ header {
 /* ----- Collaborators  ----- */
 .main-four {
     grid-area: main-four;
-    height: 122vh;
+    height: 100%;
 }
 
 .column-container {
