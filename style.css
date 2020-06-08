@@ -7,23 +7,26 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
+@font-face {
+    font-family: "Trailmix";
+    src: url("fonts/TrailMix-Regular.otf") format("opentype");
+    font-weight: normal;
+  }
+
 p {
     font-weight: 400 !important;
-    font-size: 1.3em;
-    line-height: 1.2em;
+    font-size: 1em;
+    line-height: 1.4em;
     padding-bottom: 1.5em;
 }
 
 h1 { 
-    font-size: 45px;
+    font-weight: 400;
+    font-size: 80px;
     display: block;
     float: left;
     text-transform: uppercase;
     color: white;
-}
-
-h1.right {
-    float: right;
 }
 
 h2 {
@@ -34,13 +37,18 @@ h2 {
 }
 
 h3 {
-   font-size: 30px;
-   margin-bottom: 140px;
+    font-size: 50px;
+    margin-bottom: 140px;
 }
 
-.avatar {
-    width: 25%;
-    height: 25%;
+h3,
+#number,
+ol li::before,
+#trail-mix { 
+    font-family: "Trailmix";
+    font-weight: normal;
+    -webkit-font-smoothing: antialiased; /* This needs to be set or some font faced fonts look bold on Mac in Chrome/Webkit based browsers. */
+    -moz-osx-font-smoothing: grayscale; 
 }
 
 /* ---------------------- Slides ---------------------- */
@@ -112,13 +120,14 @@ header {
 }
 
 #dialogues-header {
-    margin-left: 8%;
+    margin-left: 7.5%;
+    font-weight: 500;
 }
 
-#spring-right {
+#spring-right {  
     float: right;
-    margin-right: 4%;
-    font-weight: 300 !important;
+    margin-right: 3.5%;
+    font-weight: 300;
 }
 
 /* ----- Container ----- */
@@ -132,7 +141,7 @@ header {
     "main-four main-four"
     "main-five main-five";
 
-    grid-template-columns: 3fr 445px;
+    grid-template-columns: 3fr 480px;
     grid-template-rows: auto;
     grid-gap: 0;
 }
@@ -140,7 +149,7 @@ header {
 /* ----- Info ----- */
 .info {
     grid-area: aside;
-    padding: 8%;
+    padding: 5%;
     padding-bottom: 0;
     background: #F4F4F4;
     outline: 1px #191919 solid;
@@ -151,12 +160,19 @@ header {
     flex-direction: column;
 }
 
+.title-container {
+    background-color: #E5E5E5;
+    height: 100px;
+    margin: -10%;
+    outline: 1px #191919 solid;
+}
+
 /* ----- Artwork ----- */
 .main-one {
     grid-area: main-one;
     height: 100%;
-    background-color: black;
-    outline: 1px black solid;
+    background-color: #191919;
+    outline: 1px #191919 solid;
 }
 
 .artwork {
@@ -167,8 +183,17 @@ header {
 /* ----- Artist Name ----- */
 .main-two {
     grid-area: main-two;
-    background: black;
-    padding: 2%;
+    background: #191919;
+    padding: 12px 2% 12px 2%;
+}
+
+#number {
+    font-family: "Trailmix";
+}
+
+#collaborators-right {
+    float: right;
+    font-weight: 400;
 }
 
 /* ----- Artist's Social ----- */
@@ -203,15 +228,19 @@ ol {
     list-style: none;
     counter-reset: my-awesome-counter;
   }
+
+  li {
+    font-size: 1.5em;
+  }
+
   ol li {
     counter-increment: my-awesome-counter;
-    padding: 4%;
+    padding: 1.4%;
   }
 
   ol li::before {
     content: counter(my-awesome-counter) " ";
-    font-family: 'Courier New', Courier, monospace;
-    font-weight: bold;
+    font-size: 2em;
     padding-right: 4%;
   }
 
@@ -229,8 +258,8 @@ ol {
 }
 
 .colophon-title {
-    margin-bottom: 17%;
-    margin-left: 83%;
+    margin-bottom: 16%;
+    margin-left: 70%;
 }
 
 .main-five h2,
@@ -243,7 +272,8 @@ ol {
 }
 
 .main-five p {
-    line-height: .5em;
+    font-size: 1.2em;;
+    line-height: 0.8em;
     padding-bottom: 1em;
     text-indent: 8%;
 }
@@ -258,18 +288,22 @@ ol {
 }
 
 #typefaces-container {
-    margin-top: 16%;
+    margin-top: 10px;
 }
 
 #printed-container {
-    margin-top: 31%;
+    margin-top: 14%;
 }
 
 .item-container {
     display: grid;
-    grid-column-gap: 0;
+    grid-column-gap: 20px;
     grid-template-columns: auto auto;
-    width: 50%;
+    width: 80%;
+}
+
+#trail-mix {
+    font-size: 2em;
 }
 
 }
