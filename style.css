@@ -26,7 +26,7 @@ h1 {
     display: block;
     float: left;
     text-transform: uppercase;
-    color: white;
+    color: #fff;
 }
 
 h2 {
@@ -63,8 +63,8 @@ ol li::before,
     margin-right: 24px;
 	border: 20px solid;
 	border-color: 
-        #191919
-        #191919
+        #000
+        #000
 		transparent
 		transparent;
 	-webkit-transform: rotate(45deg);
@@ -75,8 +75,8 @@ ol li::before,
     margin-left: 24px;
 	border: 20px solid;
 	border-color: 
-        #191919
-		#191919
+        #000
+        #000
 		transparent
 		transparent;
 	-webkit-transform: rotate(225deg);
@@ -92,7 +92,7 @@ ol li::before,
     height: 100%;
     top: 0;
     z-index: 2;
-    outline: 1px #191919 solid;
+    outline: 1px #000 solid;
 }
 
 .display-left {
@@ -114,7 +114,7 @@ header {
     top: 0;
     right: 0;
     padding: 1% 2%;
-    outline: 1px #191919 solid;
+    outline: 1px #000 solid;
     z-index: 1;
     width: 100%;
 }
@@ -139,7 +139,8 @@ header {
     "main-two main-two"
     "main-three main-three"
     "main-four main-four"
-    "main-five main-five";
+    "main-five main-five"
+    "main-six main-six";
 
     grid-template-columns: 3fr 480px;
     grid-template-rows: auto;
@@ -153,7 +154,7 @@ header {
     padding-top: 0;
     padding-bottom: 0;
     background: #F4F4F4;
-    outline: 1px #191919 solid;
+    outline: 1px #000 solid;
     position: relative;
 
     display: flex;
@@ -171,15 +172,15 @@ header {
     margin-right: -5.7%;
     background-color: #E5E5E5;
     height: 100px;
-    outline: 1px #191919 solid;
+    outline: 1px #000 solid;
 }
 
 /* ----- Artwork ----- */
 .main-one {
     grid-area: main-one;
     height: 100%;
-    background-color: #191919;
-    outline: 1px #191919 solid;
+    background-color: ##000;
+    outline: 1px #000 solid;
 }
 
 .artwork {
@@ -190,7 +191,7 @@ header {
 /* ----- Artist Name ----- */
 .main-two {
     grid-area: main-two;
-    background: #191919;
+    background: #000;
     padding: 12px 2% 12px 2%;
 }
 
@@ -252,11 +253,21 @@ ol {
   }
 
 /* ----- Colophon ----- */
-
 .main-five {
     grid-area: main-five;
+    background: #000;
+    padding: 12px 2% 12px 2%;
+}
+
+#colophon-right {
+    float: right;
+    font-weight: 400;
+}
+
+.main-six {
+    grid-area: main-six;
     height: 80vh;
-    background-color: black;
+    background-color: #000;
     padding: 4%;
 
     display: flex;
@@ -264,21 +275,16 @@ ol {
     flex-direction: column;
 }
 
-.colophon-title {
-    margin-bottom: 16%;
-    margin-left: 70%;
+.main-six h2,
+.main-six p  {
+    color: #fff;
 }
 
-.main-five h2,
-.main-five p  {
-    color: white;
-}
-
-.main-five h2 {
+.main-six h2 {
     padding-bottom: 1.2em;
 }
 
-.main-five p {
+.main-six p {
     font-size: 1.2em;;
     line-height: 0.8em;
     padding-bottom: 1em;
