@@ -150,6 +150,7 @@ header {
 .info {
     grid-area: aside;
     padding: 5%;
+    padding-top: 0;
     padding-bottom: 0;
     background: #F4F4F4;
     outline: 1px #191919 solid;
@@ -160,10 +161,16 @@ header {
     flex-direction: column;
 }
 
+.info h3 {
+    padding: 3% 5%;
+}
+
 .title-container {
+    margin-bottom: 240px;
+    margin-left: -5.7%;
+    margin-right: -5.7%;
     background-color: #E5E5E5;
     height: 100px;
-    margin: -10%;
     outline: 1px #191919 solid;
 }
 
