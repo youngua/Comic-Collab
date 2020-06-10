@@ -60,19 +60,25 @@ ol li::before,
 /* ---------------------- Buttons ---------------------- */
 
 #arrow-right {
-    margin-right: 24px;
+    display: block;
+    margin: auto;
+    margin-right: 24vw;
+    width: 0;
 	border: 20px solid;
 	border-color: 
         #000
         #000
 		transparent
-		transparent;
+        transparent;
 	-webkit-transform: rotate(45deg);
 	        transform: rotate(45deg);
 }
 
 #arrow-left {
-    margin-left: 24px;
+    display: block;
+    margin: auto;
+    margin-left: 1.5vw;
+    width: 0;
 	border: 20px solid;
 	border-color: 
         #000
@@ -87,9 +93,7 @@ ol li::before,
     width: 4vw;
     position: fixed;
     border: none;
-    text-decoration: none;
     cursor: pointer;
-    font-size: 24px;
     height: 100%;
     top: 0;
     z-index: 2;
