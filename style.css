@@ -52,9 +52,9 @@ ol li::before,
 }
 
 /* ---------------------- Slides ---------------------- */
+
 .mySlides {
-    margin: 4.6% 3.8% auto 3.8%;
-    /* display: none; */
+    margin: 4.3% 4% auto 4%;
 }
 
 /* ---------------------- Buttons ---------------------- */
@@ -84,6 +84,7 @@ ol li::before,
 }
 
 .button {
+    width: 4vw;
     position: fixed;
     border: none;
     text-decoration: none;
@@ -105,7 +106,7 @@ ol li::before,
    background-color: #FFF231;
 }
 /* ---------------------- LARGE SCREENS ---------------------- */
-@media screen and (min-width: 1000px) {
+@media screen and (min-width: 1200px) {
 
 /* ----- Header ----- */
 header {
@@ -117,6 +118,7 @@ header {
     outline: 1px #000 solid;
     z-index: 1;
     width: 100%;
+    height: 4vh;
 }
 
 #dialogues-header {
@@ -179,7 +181,7 @@ header {
 .main-one {
     grid-area: main-one;
     height: 100%;
-    background-color: ##000;
+    background-color: #000;
     outline: 1px #000 solid;
 }
 
@@ -225,6 +227,7 @@ iframe {
 .main-four {
     grid-area: main-four;
     height: 100%;
+    outline: 1px #000 solid;
 }
 
 .column-container {
@@ -326,9 +329,30 @@ ol {
 
 }
 
+/* ---------------------- MEDIUM DEVICES ---------------------- */
+@media screen and (min-width: 992px) {
+    /* medium devices */
+    
+    /* ---------------------- Slides ---------------------- */
+    /* .mySlides {
+        margin: 4.6% 3.8% auto 3.8%;
+    } */
+}
+
+/* ---------------------- Larger than SMALL SCREENS---------------------- */
+@media screen and (min-width: 768px) {
+    /* small devices, tablets */
+
+    /* ---------------------- Slides ---------------------- */
+    /* .mySlides {
+        margin: 5% 3.8% auto 3.8%;
+    } */
+
+}
+
 /* ---------------------- SMALL SCREENS---------------------- */
 @media screen and (max-width: 768px) {
-    /* iPhone X */
+    /* smartphones */
 
     .container {
         grid-template-areas:
