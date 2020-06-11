@@ -145,8 +145,7 @@ ol li::before,
         "main-two main-two"
         "main-three main-three"
         "main-four main-four"
-        "main-five main-five"
-        "main-six main-six";
+        "main-five main-five";
 
         grid-template-columns: 3fr 480px;
         grid-template-rows: auto;
@@ -287,40 +286,39 @@ ol li::before,
     }
 
     /* ----- Colophon ----- */
-    /* .main-five {
-        grid-area: main-five;
-        background: #000;
-        padding: 12px 2% 12px 2%;
-    } */
 
     #colophon-right {
         float: right;
         margin-top: -3%;
         margin-right: -2%;
         font-weight: 400;
+        position: absolute;
+        top: 60px;
+        right: 4%;
     }
 
-    .main-six {
-        grid-area: main-six;
+    .main-five {
+        grid-area: main-five;
         height: 80vh;
         background-color: #000;
         padding: 4%;
+        position: relative;
 
-        /* display: flex;
+        display: flex;
         justify-content: flex-end;
-        flex-direction: column; */
+        flex-direction: column;
     }
 
-    .main-six h2,
-    .main-six p  {
+    .main-five h2,
+    .main-five p  {
         color: #fff;
     }
 
-    .main-six h2 {
+    .main-five h2 {
         padding-bottom: 1.2em;
     }
 
-    .main-six p {
+    .main-five p {
         font-size: 1.2em;;
         line-height: 0.8em;
         padding-bottom: 1em;
@@ -349,7 +347,6 @@ ol li::before,
         grid-column-gap: 20px;
         grid-template-columns: auto auto;
         width: 80%;
-        margin-top: 20%;
     }
 
     #trail-mix {
