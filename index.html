@@ -11,7 +11,7 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link href="style.css" rel="stylesheet" type="text/css"/>
-    <script src="script.js" type="text/javascript"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     
     <link rel="shortcut icon" href="images/favicon.png" type="image/png"/>
     <title>Dialogues</title>
@@ -19,8 +19,8 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
 <body>
 
 <!-- This is the left and right arrow buttons to turn to the next slides on the slideshow -->
-  <button id="button" class="display-left" onclick="plusDivs(-1)"><div id="arrow-left"></div></button>
-  <button id="button" class="display-right" onclick="plusDivs(1)"><div id="arrow-right"></div></button>
+  <button id="display-left" onclick="plusDivs(-1)"><div id="arrow-left"></div></button>
+  <button id="display-right" onclick="plusDivs(1)"><div id="arrow-right"></div></button>
 
   <header id="header">
       <h2 id="dialogues-header">DIALOGUES—</h2>
@@ -28,8 +28,8 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
   </header>
 
 <!-- Homepage start here -->
-    <div class="mySlides">
-        <div class="container">
+    <div class="mySlides" id="grey-header">
+        <div class="container" >
             
             <main class="main-one">
                 <img class="artwork" src="img/team1-blue-yellow/14-corinne-ang.jpg" />
@@ -151,7 +151,8 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
     </div>
 
 <!-- Artist-page 1 -->
-<div class="mySlides">
+<div class="mySlides" id="yellow-header" >
+    <div id="black-button-left"></div>
     <div class="container">
 
         <main class="main-one">
@@ -181,7 +182,7 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
 </div>
 
 <!-- Artist-page 7 -->
-<div class="mySlides">
+<div class="mySlides" id="yellow-header">
     <div class="container">
 
         <main class="main-one">
@@ -212,8 +213,8 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
 </div>
 
 <!-- Artist-page 17 -->
-<div class="mySlides">
-    <div class="container">
+<div class="mySlides" id="yellow-header">
+    <div class="container" >
 
         <main class="main-one">
             <img class="artwork" src="img/team1-blue-yellow/1-020620-elisha gillette.jpg" />
@@ -236,13 +237,13 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
         </main>
 
         <main class="main-three">
-            <iframe src="https://www.instagram.com/p/B_AnhaADMJk/embed"></iframe> 
+            <iframe src="https://www.behance.net/bchen01de84"></iframe> 
         </main> 
     </div>
 </div>
 
 <!-- Artist-page 35 -->
-<div class="mySlides">
+<div class="mySlides" id="pink-header">
     <div class="container">
 
         <main class="main-one">
@@ -267,31 +268,7 @@ source: https://logosbynick.com/illustrator-exports-1-pixel-more/
         </main> 
     </div>
 </div>
-  
-<script>
-
-var slideIndex = 1;
-showDivs(slideIndex);
-
-function plusDivs(n) {
-    showDivs(slideIndex += n);
-}
-
-function showDivs(n) {
-    var i;
-    var x = document.getElementsByClassName("mySlides");
-    if (n > x.length) { 
-        slideIndex = 1; 
-    }
-    if (n < 1) { 
-        slideIndex = x.length
-    }
-    for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-    }
-    x[slideIndex - 1].style.display = "block";
-}
-</script>
     
+<script src="script.js" type="text/javascript"></script>
 </body>
 </html>

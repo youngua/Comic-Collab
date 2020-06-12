@@ -100,14 +100,24 @@ button {
     outline: 1px #000 solid;
 }
 
-.display-left {
+#display-left {
     left: 0;
     background-color: #FF83EC;
 }
 
-.display-right {
+.black-button-left {
+    left: 0;
+    background-color: #000;
+}
+
+#display-right {
    right: 0;
    background-color: #FFF231;
+}
+
+.black-button-right {
+    right: 0;
+    background-color: #000;
 }
 /* ---------------------- LARGE SCREENS ---------------------- */
 @media screen and (min-width: 1200px) {
@@ -123,6 +133,16 @@ button {
         z-index: 1;
         width: 100%;
         height: 4vh;
+    }
+
+    .pink-header {
+        background-color: #FF83EC;
+      }
+    .yellow-header {
+        background-color: #FFF231;
+      }
+    .grey-header {
+        background-color: #F4F4F4;
     }
 
     #dialogues-header {
