@@ -241,6 +241,10 @@ button {
         background-color: #FFF231;
     }
 
+    .pink {
+        background-color: #FF83EC;
+    }
+
     /* ----- Artist's Social ----- */
     .main-three {
         grid-area: main-three;
