@@ -98,26 +98,17 @@ button {
     top: 0;
     z-index: 2;
     outline: 1px #000 solid;
+    float:left;
 }
 
-#display-left {
+.display-left {
     left: 0;
     background-color: #FF83EC;
 }
 
-.black-button-left {
-    left: 0;
-    background-color: #000;
-}
-
-#display-right {
+.display-right {
    right: 0;
    background-color: #FFF231;
-}
-
-.black-button-right {
-    right: 0;
-    background-color: #000;
 }
 /* ---------------------- LARGE SCREENS ---------------------- */
 @media screen and (min-width: 1200px) {

@@ -16,34 +16,40 @@ function plusDivs(n) {
 // the following checks for if slides can appear
 function showDivs(n) {
     var i;
-    var x = document.getElementsByClassName("mySlides");
+    var x = document.getElementsByClassName('mySlides');
 
+    // this reach the end
     if (n > x.length) {
         slideIndex = 1;
-        // this reach the end
     }
+
+    //this triggers when left btn is clicked
     if (n < 1) {
         slideIndex = x.length
-        //this triggers when left btn is clicked
     }
+
     for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
+        x[i].style.display = 'none';
     }
-    x[slideIndex - 1].style.display = "block";
+
+    x[slideIndex - 1].style.display = 'block';
 
     // this change the header bg-color per each slides
     document.getElementById('header').className = (x[slideIndex - 1].getAttribute('id'));
 
-    // this change the bg-color of button right after first slide
-    //document.getElementById('display-right').className = (x[slideIndex - 1].getAttribute('id'));
-    // if (slideIndex >= 1 && slideIndex <= 2) {
-    //     document.getElementById('display-right').id = "black-button-right";
-    //     document.getElementById('display-left').id = "black-button-left";
-    // }
-    //document.getElementById('display-left').className = (x[slideIndex - 1].getAttribute('id'));
-    //element.style.backgroundColor
+    // this change the bg-color of button and arrow for certain slides
+    if (slideIndex >= 2) {
+        document.getElementById('display-right').style.backgroundColor = '#000';
+        document.getElementById('display-left').style.backgroundColor = '#000';
 
+        document.getElementById('arrow-right').style.borderColor = '#fff #fff transparent transparent';
+        document.getElementById('arrow-left').style.borderColor = '#fff #fff transparent transparent';
 
-    // let target = document.getElementById('display-right').className;
-    // console.log(target);
+    } else if (slideIndex == 1) {
+        document.getElementById('display-right').style.backgroundColor = '#FFF231';
+        document.getElementById('display-left').style.backgroundColor = '#FF83EC';
+
+        document.getElementById('arrow-right').style.borderColor = '#000 #000 transparent transparent';
+        document.getElementById('arrow-left').style.borderColor = '#000 #000 transparent transparent';
+    }
 }
