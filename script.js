@@ -36,14 +36,14 @@ function showDivs(n) {
 
     // this change the bg-color of button right after first slide
     //document.getElementById('display-right').className = (x[slideIndex - 1].getAttribute('id'));
-    if (slideIndex >= 1 && slideIndex <= 2) {
-        document.getElementById('display-right').id = "black-button-right";
-        document.getElementById('display-left').id = "black-button-left";
-    }
+    // if (slideIndex >= 1 && slideIndex <= 2) {
+    //     document.getElementById('display-right').id = "black-button-right";
+    //     document.getElementById('display-left').id = "black-button-left";
+    // }
     //document.getElementById('display-left').className = (x[slideIndex - 1].getAttribute('id'));
     //element.style.backgroundColor
 
 
-    let target = document.getElementById('display-right').className;
-    console.log(target);
+    // let target = document.getElementById('display-right').className;
+    // console.log(target);
 }
