@@ -96,12 +96,17 @@ button {
     float:left;
 }
 
-.display-left {
+#display-left {
     left: 0;
     background-color: #FF83EC;
 }
 
-.display-right {
+.display-left:hover {
+    left: 0;
+    background-color: #5B356F;
+}
+
+#display-right {
    right: 0;
    background-color: #FFF231;
 }
@@ -126,11 +131,25 @@ button {
     .pink-header {
         background-color: #FF83EC;
       }
+
+    .pink-header:hover {
+        background-color: #5B356F;
+    }
+
     .yellow-header {
         background-color: #FFF231;
       }
+
+    .yellow-header:hover {
+        background-color: #3957CB;
+    }
+
     .grey-header {
         background-color: #F4F4F4;
+    }
+
+    .grey-header:hover {
+        background-color: #E5E5E5;
     }
 
     #dialogues-header {

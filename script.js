@@ -32,7 +32,7 @@ function showDivs(n) {
         slideIndex = 1;
     }
 
-    //this triggers when left btn is clicked
+    // this triggers when left btn is clicked
     if (n < 1) {
         slideIndex = x.length
     }
@@ -46,19 +46,102 @@ function showDivs(n) {
     // this change the header bg-color per each slides
     document.getElementById('header').className = (x[slideIndex - 1].getAttribute('id'));
 
+    console.log(slideIndex);
+
     // this change the bg-color of button and arrow for certain slides
     if (slideIndex >= 2) {
+
+        // change the buttons to black
         document.getElementById('display-right').style.backgroundColor = '#000';
         document.getElementById('display-left').style.backgroundColor = '#000';
 
+        // change arrow to white
         document.getElementById('arrow-right').style.borderColor = '#fff #fff transparent transparent';
         document.getElementById('arrow-left').style.borderColor = '#fff #fff transparent transparent';
 
     } else if (slideIndex == 1) {
+
+        // change button back to pink and yellow
         document.getElementById('display-right').style.backgroundColor = '#FFF231';
         document.getElementById('display-left').style.backgroundColor = '#FF83EC';
 
+        //change arrow back to black
         document.getElementById('arrow-right').style.borderColor = '#000 #000 transparent transparent';
         document.getElementById('arrow-left').style.borderColor = '#000 #000 transparent transparent';
     }
+
+
+    /* this deals with the hover states*/
+    if (slideIndex >= 2 && slideIndex <= 3) {
+
+        // when mouse hover left button, it turn purple
+        document.getElementById('display-left').onmouseenter = function () {
+            document.getElementById("display-left").style.backgroundColor = '#3957CB';
+        };
+
+        document.getElementById('display-left').onmouseleave = function () {
+            document.getElementById("display-left").style.backgroundColor = '#000';
+        };
+
+        // when mouse hovers over yellow button, it turn blue
+        document.getElementById('display-right').onmouseenter = function () {
+            document.getElementById("display-right").style.backgroundColor = '#3957CB';
+        };
+
+        document.getElementById('display-right').onmouseleave = function () {
+            document.getElementById("display-right").style.backgroundColor = '#000';
+        };
+
+    } else if (slideIndex == 4) {
+
+        // when mouse hovers over yellow button, it turn blue
+        document.getElementById('display-right').onmouseenter = function () {
+            document.getElementById("display-right").style.backgroundColor = '#5B356F';
+        };
+
+        document.getElementById('display-right').onmouseleave = function () {
+            document.getElementById("display-right").style.backgroundColor = '#000';
+        };
+
+    } else if (slideIndex == 5) {
+
+        // when mouse hover left button, it turn purple
+        document.getElementById('display-left').onmouseenter = function () {
+            document.getElementById("display-left").style.backgroundColor = '#3957CB';
+        };
+
+        document.getElementById('display-left').onmouseleave = function () {
+            document.getElementById("display-left").style.backgroundColor = '#000';
+        };
+
+        // when mouse hovers over yellow button, it turn blue
+        document.getElementById('display-right').onmouseenter = function () {
+            document.getElementById("display-right").style.backgroundColor = '#5B356F';
+        };
+
+        document.getElementById('display-right').onmouseleave = function () {
+            document.getElementById("display-right").style.backgroundColor = '#000';
+        };
+
+    } else if (slideIndex == 1) {
+
+        // when mouse hovers over pink button, it turn purple
+        document.getElementById('display-left').onmouseenter = function () {
+            document.getElementById("display-left").style.backgroundColor = '#5B356F';
+        };
+
+        document.getElementById('display-left').onmouseleave = function () {
+            document.getElementById("display-left").style.backgroundColor = '#FF83EC';
+        };
+
+        // when mouse hovers over yellow button, it turn blue
+        document.getElementById('display-right').onmouseenter = function () {
+            document.getElementById("display-right").style.backgroundColor = '#3957CB';
+        };
+
+        document.getElementById('display-right').onmouseleave = function () {
+            document.getElementById("display-right").style.backgroundColor = '#FFF231';
+        };
+    }
+
 }
