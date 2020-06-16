@@ -33,7 +33,7 @@ function toggleMenu() {
 // });
 
 $(document).ready(function () {
-    var x = $(location).attr('href').replace('http://graceyoung.design/index.html', "");
+    var x = $(location).attr('href').replace('http://graceyoung.design/Dialogues/index.html', "");
     $('a[href="' + x + '"]').click();
 
     var y = document.getElementsByClassName('mySlides');
