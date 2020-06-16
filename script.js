@@ -5,8 +5,12 @@
 *The code below - when the right or left arrows are clicked, the entire html page (each is its own slideshow), turns to the next page.
 */
 
+/* 
+* Toggles the menu.
+*/
 function toggleMenu() {
     var x = document.getElementById("dropdown-container");
+
     if (x.style.display === "none") {
         x.style.display = "grid";
     } else {
@@ -14,15 +18,44 @@ function toggleMenu() {
     }
 }
 
+//https://stackoverflow.com/questions/1103406/expanding-a-hidden-div-by-referring-with-an-anchor-from-external-page
+// https://stackoverflow.com/questions/32100008/anchor-link-to-content-inside-hidden-div
+
+// if this link is selected, then trigger
+// $("#link").click(function () {
+//     $(this).toggleClass("active").next().slideToggle("normal", function () {
+//     });
+// });
+
+// var $targets = $('.target');
+// $('.click').click(function () {
+//     var $target = $($(this).data('target')).toggle();
+// });
+
+$(document).ready(function () {
+    var x = $(location).attr('href').replace('http://graceyoung.design/index.html', "");
+    $('a[href="' + x + '"]').click();
+
+    var y = document.getElementsByClassName('mySlides');
+    y[slideIndex - 1].style.display = 'block';
+});
+
+/* 
+* Global variables
+*/
 var slideIndex = 1;
 showDivs(slideIndex);
 
-// this function is used by the buttons
+/* 
+* This function is called by the buttons
+*/
 function plusDivs(n) {
     showDivs(slideIndex += n);
 }
 
-// the following checks for if slides can appear
+/* 
+* The following checks for if slides can appear
+*/
 function showDivs(n) {
     var i;
     var x = document.getElementsByClassName('mySlides');
@@ -48,7 +81,9 @@ function showDivs(n) {
 
     console.log(slideIndex);
 
-    // this change the bg-color of button and arrow for certain slides
+    /* 
+    * The following change the buttons to black and arrows to white for all slides except the first
+    */
     if (slideIndex >= 2) {
 
         // change the buttons to black
@@ -70,78 +105,83 @@ function showDivs(n) {
         document.getElementById('arrow-left').style.borderColor = '#000 #000 transparent transparent';
     }
 
+    /* 
+    * The following change the hover states depending on which slide it is on.
+    * For yellow slides, blue hover state
+    * For pink slides, purple hover state
+    */
+    // if (slideIndex >= 2 && slideIndex <= 3) {
 
-    /* this deals with the hover states*/
-    if (slideIndex >= 2 && slideIndex <= 3) {
+    //     // when mouse hover left button, it turn purple
+    //     document.getElementById('display-left').onmouseenter = function () {
+    //         document.getElementById("display-left").style.backgroundColor = '#3957CB';
+    //     };
 
-        // when mouse hover left button, it turn purple
-        document.getElementById('display-left').onmouseenter = function () {
-            document.getElementById("display-left").style.backgroundColor = '#3957CB';
-        };
+    //     document.getElementById('display-left').onmouseleave = function () {
+    //         document.getElementById("display-left").style.backgroundColor = '#000';
+    //     };
 
-        document.getElementById('display-left').onmouseleave = function () {
-            document.getElementById("display-left").style.backgroundColor = '#000';
-        };
+    //     // when mouse hovers over yellow button, it turn blue
+    //     document.getElementById('display-right').onmouseenter = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#3957CB';
+    //     };
 
-        // when mouse hovers over yellow button, it turn blue
-        document.getElementById('display-right').onmouseenter = function () {
-            document.getElementById("display-right").style.backgroundColor = '#3957CB';
-        };
+    //     document.getElementById('display-right').onmouseleave = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#000';
+    //     };
 
-        document.getElementById('display-right').onmouseleave = function () {
-            document.getElementById("display-right").style.backgroundColor = '#000';
-        };
+    // } else if (slideIndex == 4) {
 
-    } else if (slideIndex == 4) {
+    //     // when mouse hovers over yellow button, it turn blue
+    //     document.getElementById('display-right').onmouseenter = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#5B356F';
+    //     };
 
-        // when mouse hovers over yellow button, it turn blue
-        document.getElementById('display-right').onmouseenter = function () {
-            document.getElementById("display-right").style.backgroundColor = '#5B356F';
-        };
+    //     document.getElementById('display-right').onmouseleave = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#000';
+    //     };
 
-        document.getElementById('display-right').onmouseleave = function () {
-            document.getElementById("display-right").style.backgroundColor = '#000';
-        };
+    // } else if (slideIndex == 5) {
 
-    } else if (slideIndex == 5) {
+    //     // when mouse hover left button, it turn purple
+    //     document.getElementById('display-left').onmouseenter = function () {
+    //         document.getElementById("display-left").style.backgroundColor = '#3957CB';
+    //     };
 
-        // when mouse hover left button, it turn purple
-        document.getElementById('display-left').onmouseenter = function () {
-            document.getElementById("display-left").style.backgroundColor = '#3957CB';
-        };
+    //     document.getElementById('display-left').onmouseleave = function () {
+    //         document.getElementById("display-left").style.backgroundColor = '#000';
+    //     };
 
-        document.getElementById('display-left').onmouseleave = function () {
-            document.getElementById("display-left").style.backgroundColor = '#000';
-        };
+    //     // when mouse hovers over yellow button, it turn blue
+    //     document.getElementById('display-right').onmouseenter = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#5B356F';
+    //     };
 
-        // when mouse hovers over yellow button, it turn blue
-        document.getElementById('display-right').onmouseenter = function () {
-            document.getElementById("display-right").style.backgroundColor = '#5B356F';
-        };
+    //     document.getElementById('display-right').onmouseleave = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#000';
+    //     };
 
-        document.getElementById('display-right').onmouseleave = function () {
-            document.getElementById("display-right").style.backgroundColor = '#000';
-        };
+    // } else if (slideIndex == 1) {
 
-    } else if (slideIndex == 1) {
+    //     // when mouse hovers over pink button, it turn purple
+    //     document.getElementById('display-left').onmouseenter = function () {
+    //         document.getElementById("display-left").style.backgroundColor = '#5B356F';
+    //     };
 
-        // when mouse hovers over pink button, it turn purple
-        document.getElementById('display-left').onmouseenter = function () {
-            document.getElementById("display-left").style.backgroundColor = '#5B356F';
-        };
+    //     document.getElementById('display-left').onmouseleave = function () {
+    //         document.getElementById("display-left").style.backgroundColor = '#FF83EC';
+    //     };
 
-        document.getElementById('display-left').onmouseleave = function () {
-            document.getElementById("display-left").style.backgroundColor = '#FF83EC';
-        };
+    //     // when mouse hovers over yellow button, it turn blue
+    //     document.getElementById('display-right').onmouseenter = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#3957CB';
+    //     };
 
-        // when mouse hovers over yellow button, it turn blue
-        document.getElementById('display-right').onmouseenter = function () {
-            document.getElementById("display-right").style.backgroundColor = '#3957CB';
-        };
-
-        document.getElementById('display-right').onmouseleave = function () {
-            document.getElementById("display-right").style.backgroundColor = '#FFF231';
-        };
-    }
-
+    //     document.getElementById('display-right').onmouseleave = function () {
+    //         document.getElementById("display-right").style.backgroundColor = '#FFF231';
+    //     };
+    // }
 }
+
+
+

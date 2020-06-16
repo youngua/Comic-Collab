@@ -42,14 +42,20 @@ h3 {
 
 h3,
 #number,
-ol li::before,
+ol li::before, 
 #trail-mix, 
 .dropdown-about { 
     font-family: "Trailmix";
     font-weight: normal;
     -webkit-font-smoothing: antialiased; /* This needs to be set or some font faced fonts look bold on Mac in Chrome/Webkit based browsers. */
     -moz-osx-font-smoothing: grayscale; 
-    color: #000;
+}
+
+/* ---------------------- links ---------------------- */
+a {
+    text-decoration: none;
+    color: inherit;
+    cursor: pointer;
 }
 
 /* ---------------------- Buttons ---------------------- */
@@ -101,15 +107,15 @@ button {
     background-color: #FF83EC;
 }
 
-.display-left:hover {
-    left: 0;
-    background-color: #5B356F;
-}
-
 #display-right {
    right: 0;
    background-color: #FFF231;
 }
+
+.display-right {
+    right: 0;
+    background-color: #000;
+ }
 
 /* ---------------------- LARGE SCREENS ---------------------- */
 @media screen and (min-width: 1200px) {
@@ -134,6 +140,7 @@ button {
 
     .pink-header:hover {
         background-color: #5B356F;
+        color: #F4F4F4;
     }
 
     .yellow-header {
@@ -142,6 +149,7 @@ button {
 
     .yellow-header:hover {
         background-color: #3957CB;
+        color: #F4F4F4;
     }
 
     .grey-header {
@@ -430,21 +438,12 @@ button {
 /* ---------------------- MEDIUM DEVICES ---------------------- */
 @media screen and (min-width: 992px) {
     /* medium devices */
-    
-    /* ---------------------- Slides ---------------------- */
-    /* .mySlides {
-        margin: 4.6% 3.8% auto 3.8%;
-    } */
+   
 }
 
 /* ---------------------- Larger than SMALL SCREENS---------------------- */
 @media screen and (min-width: 768px) {
     /* small devices, tablets */
-
-    /* ---------------------- Slides ---------------------- */
-    /* .mySlides {
-        margin: 5% 3.8% auto 3.8%;
-    } */
 
 }
 
