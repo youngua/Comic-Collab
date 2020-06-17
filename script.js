@@ -23,8 +23,7 @@ function toggleMenu() {
 
 // if this link is selected, then trigger
 // $("#link").click(function () {
-//     $(this).toggleClass("active").next().slideToggle("normal", function () {
-//     });
+//     $("." + hiddenElements.pop()).show();
 // });
 
 // var $targets = $('.target');
@@ -32,13 +31,17 @@ function toggleMenu() {
 //     var $target = $($(this).data('target')).toggle();
 // });
 
-$(document).ready(function () {
-    var x = $(location).attr('href').replace('http://graceyoung.design/Dialogues/index.html', "");
-    $('a[href="' + x + '"]').click();
+// $(document).ready(function () {
+//     var x = $(location).attr('href').replace('http://graceyoung.design/Dialogues/index.html', "");
+//     $('a[href="' + x + '"]').click();
 
-    var y = document.getElementsByClassName('mySlides');
-    y[slideIndex - 1].style.display = 'block';
-});
+//     var y = document.getElementsByClassName('mySlides');
+//     y[slideIndex - 1].style.display = 'block';
+// });
+
+// if (document.location.hash) {
+//     $('.' + document.location.hash.substring(1)).slideDown();
+// }
 
 /* 
 * Global variables
@@ -60,7 +63,7 @@ function showDivs(n) {
     var i;
     var x = document.getElementsByClassName('mySlides');
 
-    // this reach the end
+    // this tiggers when the end is reached
     if (n > x.length) {
         slideIndex = 1;
     }
@@ -75,6 +78,11 @@ function showDivs(n) {
     }
 
     x[slideIndex - 1].style.display = 'block';
+
+    // $("#link").click(function () {
+
+    //     x.style.display = 'block';
+    // });
 
     // this change the header bg-color per each slides
     document.getElementById('header').className = (x[slideIndex - 1].getAttribute('id'));
