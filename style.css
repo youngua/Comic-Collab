@@ -1,4 +1,5 @@
 /* ---------------------- Global metrics---------------------- */
+
 * {
     margin: 0;
     padding: 0;
@@ -11,7 +12,7 @@
     font-family: "Trailmix";
     src: url("fonts/TrailMix-Regular.otf") format("opentype");
     font-weight: normal;
-  }
+}
 
 p {
     font-weight: 400 !important;
@@ -60,34 +61,64 @@ a {
 
 /* ---------------------- Buttons ---------------------- */
 
-#arrow-right {
-    display: block;
-    margin: auto;
-    margin-right: 1.5vw;
-    width: 0;
-	border: 20px solid;
-	border-color: 
-        #000
-        #000
-		transparent
-        transparent;
-	-webkit-transform: rotate(45deg);
-	        transform: rotate(45deg);
-}
-
 #arrow-left {
     display: block;
     margin: auto;
     margin-left: 1.5vw;
     width: 0;
-	border: 20px solid;
-	border-color: 
+    border: 20px solid;
+    border-color: 
         #000
         #000
-		transparent
-		transparent;
-	-webkit-transform: rotate(225deg);
-	        transform: rotate(225deg);
+        transparent
+        transparent;
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+}
+
+#arrow-right {
+    display: block;
+    margin: auto;
+    margin-right: 1.5vw;
+    width: 0;
+    border: 20px solid;
+    border-color: 
+        #000
+        #000
+        transparent
+        transparent;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+#arrow-left-white {
+    display: block;
+    margin: auto;
+    margin-left: 1.5vw;
+    width: 0;
+    border: 20px solid;
+    border-color: 
+        #fff
+        #fff
+        transparent
+        transparent;
+    -webkit-transform: rotate(225deg);
+            transform: rotate(225deg);
+}
+
+#arrow-right-white {
+    display: block;
+    margin: auto;
+    margin-right: 1.5vw;
+    width: 0;
+    border: 20px solid;
+    border-color: 
+        #fff
+        #fff
+        transparent
+        transparent;
+    -webkit-transform: rotate(45deg);
+            transform: rotate(45deg);
 }
 
 button {
@@ -107,363 +138,368 @@ button {
     background-color: #FF83EC;
 }
 
-#display-right {
-   right: 0;
-   background-color: #FFF231;
+#display-left:hover {
+    background-color: #5B356F;
 }
 
-.display-right {
+#display-right {
+    right: 0;
+    background-color: #FFF231;
+}
+
+#display-right:hover {
+    background-color: #3957CB;
+}
+
+.display-left-black {
+    left: 0;
+    background-color: #000;
+}
+
+.display-right-black {
     right: 0;
     background-color: #000;
- }
-
-/* ---------------------- LARGE SCREENS ---------------------- */
-@media screen and (min-width: 1200px) {
-
-    /* ----- Header ----- */
-    header {
-        background-color: #F4F4F4;
-        position: fixed;
-        top: 0;
-        right: 0;
-        padding: 1% 2%;
-        outline: 1px #000 solid;
-        z-index: 1;
-        width: 100%;
-        height: 4vh;
-        cursor: pointer;
-    }
-
-    .pink-header {
-        background-color: #FF83EC;
-      }
-
-    .pink-header:hover {
-        background-color: #5B356F;
-        color: #F4F4F4;
-    }
-
-    .yellow-header {
-        background-color: #FFF231;
-      }
-
-    .yellow-header:hover {
-        background-color: #3957CB;
-        color: #F4F4F4;
-    }
-
-    .grey-header {
-        background-color: #F4F4F4;
-    }
-
-    .grey-header:hover {
-        background-color: #E5E5E5;
-    }
-
-    #dialogues-header {
-        margin-left: 7.5%;
-        font-weight: 500;
-    }
-
-    #spring-right {  
-        float: right;
-        margin-right: 3.5%;
-        font-weight: 300;
-    }
-
-    /* ----- Container ----- */
-    .container,
-    #dropdown-container {
-        display: grid;
-
-        grid-template-areas:
-        "main-one aside"
-        "main-two main-two"
-        "main-three main-three"
-        "main-four main-four"
-        "main-five main-five";
-
-        grid-template-columns: 3fr 480px;
-        grid-template-rows: auto;
-        grid-gap: 0;
-        margin: 4.3vw 4% auto 4%;
-    }
-
-    /* ----- Info ----- */
-    .info {
-        grid-area: aside;
-        padding: 5%;
-        padding-top: 0;
-        padding-bottom: 0;
-        background: #F4F4F4;
-        outline: 1px #000 solid;
-        position: relative;
-
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-        z-index: -1;
-    }
-
-    .info h3 {
-        padding: 3% 5%;
-        background-color: #E5E5E5;
-        display: inline-block;
-        outline: 1px #000 solid;
-    
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-    }
-
-    /* ----- Artwork ----- */
-
-    img {
-        height: 100%;
-        width: 100%;
-    }
-
-    .main-one,
-    .info {
-        height: 80vh;
-    }
-
-    .main-one {
-        grid-area: main-one;
-        background-color: #000;
-        outline: 1px #000 solid;
-    }
-
-    .artwork {
-        height: 100%;
-        width: 100%;
-    }
-
-    /* ----- Artist Name ----- */
-    .main-two {
-        grid-area: main-two;
-        background-color: #000;
-        padding: 12px 2% 12px 2%;
-        outline: 1px #000 solid;
-    }
-
-    #collaborators-number {
-        font-family: "Trailmix";
-    }
-
-    #collaborators-right,
-    #name-right {
-        float: right;
-        font-weight: 400;
-    }
-
-    h1#name-right,
-    h1#number {
-        color: #000;
-    }
-
-    .yellow {
-        background-color: #FFF231;
-    }
-
-    .pink {
-        background-color: #FF83EC;
-    }
-
-    /* ----- Artist's Social ----- */
-    .main-three {
-        grid-area: main-three;
-        height: 80vh;
-        outline: 1px #000 solid;
-    }
-
-    iframe {
-        width: 100%;
-        height: 80vh;
-        border: none;
-    }
-
-    #split-iframe {
-        width: 50%;
-        float: left;
-    }
-
-    /* ----- Collaborators  ----- */
-    .main-four {
-        grid-area: main-four;
-        height: 100%;
-        outline: 1px #000 solid;
-        background-color: #F4F4F4;
-    }
-
-    .column-container {
-        display: grid;
-        grid-column-gap: 0;
-        grid-template-columns: auto auto auto;
-    }
-
-    .column-item {
-        padding: 4%;
-    }
-
-    ol {
-        list-style: none;
-        counter-reset: my-awesome-counter;
-    }
-
-    ol li {
-        counter-increment: my-awesome-counter;
-        padding: 1.4%;
-        font-size: 1.5em;
-    }
-
-    ol li::before {
-        content: counter(my-awesome-counter) " ";
-        font-size: 2em;
-        padding-right: 4%;
-    }
-
-    /* 
-    How to right align the number
-    https://stackoverflow.com/questions/3460902/right-align-legal-styled-numbers-and-left-align-text-in-ordered-lists-using-css */
-
-    /* ----- Colophon ----- */
-
-    #colophon-right {
-        font-weight: 400;
-        position: absolute;
-        top: 2%;
-        right: 2%;
-    }
-
-    .main-five {
-        grid-area: main-five;
-        height: 80vh;
-        background-color: #000;
-        padding: 4%;
-        position: relative;
-
-        display: flex;
-        justify-content: flex-end;
-        flex-direction: column;
-    }
-
-    .main-five h2,
-    .main-five p  {
-        color: #fff;
-    }
-
-    .main-five h2 {
-        padding-bottom: 1.2em;
-    }
-
-    .main-five p {
-        font-size: 1.2em;;
-        line-height: 0.8em;
-        padding-bottom: 1em;
-        text-indent: 8%;
-    }
-
-    #team-title {
-        margin-left: -8%;
-    }
-
-    .item h2 {
-        padding-top: 8%;
-        float: none;
-    }
-
-    #typefaces-container {
-        margin-top: 10px;
-    }
-
-    #printed-container {
-        margin-top: 14%;
-    }
-
-    .item-container {
-        display: grid;
-        grid-column-gap: 20px;
-        grid-template-columns: auto auto;
-        width: 80%;
-    }
-
-    #trail-mix {
-        font-size: 2em;
-    }
-
-    /* ----- dropdown ----- */
-    #dropdown-container {
-        display: none;
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        max-height: 100%;
-        overflow-y: scroll;
-        background-color: #F4F4F4;
-    }
-
-    #dropdown-container::-webkit-scrollbar {
-        width: 0px;
-        background: transparent; /* make scrollbar transparent */
-    }
-
-    .dropdown-main-five {
-        grid-area: main-five;
-        background-color: #E5E5E5;
-        padding: 2%;
-        position: relative;
-        outline: 1px #000 solid;
-    }
-
-    .grey {
-        background-color: #E5E5E5;
-        padding: 2%;
-        margin-bottom: 1px;
-    }
-
-    #readmore {
-        padding: 0;
-        font-size: 1.5em;
-        float: right;
-        border-bottom: 1px #000 solid;
-        line-height: 1em;
-        margin-top: 0.5%;
-    }
 }
 
-/* ---------------------- MEDIUM DEVICES ---------------------- */
-@media screen and (min-width: 992px) {
-    /* medium devices */
-   
+#hover-blue:hover {
+    background-color: #3957CB;
 }
 
-/* ---------------------- Larger than SMALL SCREENS---------------------- */
-@media screen and (min-width: 768px) {
-    /* small devices, tablets */
+#hover-purple:hover {
+    background-color: #5B356F;
+}
 
+/* ----- Header ----- */
+header {
+    box-sizing: border-box;
+    background-color: #F4F4F4;
+    position: fixed;
+    top: 0;
+    right: 0;
+    padding: 1% 2%;
+    outline: 1px #000 solid;
+    z-index: 1;
+    width: 100%;
+    cursor: pointer;
+}
+
+.pink-header {
+    background-color: #FF83EC;
+    }
+
+.pink-header:hover {
+    background-color: #5B356F;
+    color: #F4F4F4;
+}
+
+.yellow-header {
+    background-color: #FFF231;
+    }
+
+.yellow-header:hover {
+    background-color: #3957CB;
+    color: #F4F4F4;
+}
+
+.grey-header {
+    background-color: #F4F4F4;
+}
+
+.grey-header:hover {
+    background-color: #E5E5E5;
+}
+
+#dialogues-header {
+    margin-left: 4%;
+    font-weight: 500;
+}
+
+#spring-right {  
+    float: right;
+    margin-right: 3.5%;
+    font-weight: 300;
+}
+
+/* ----- Container ----- */
+.container,
+#dropdown-container {
+    display: grid;
+
+    grid-template-areas:
+    "main-one aside"
+    "main-two main-two"
+    "main-three main-three"
+    "main-four main-four"
+    "main-five main-five";
+
+    grid-template-columns: 3fr 480px;
+    grid-template-rows: auto;
+    grid-gap: 0;
+    margin: 4.6% 4% auto 4%;
+}
+
+/* ----- Info ----- */
+.info {
+    grid-area: aside;
+    padding: 5%;
+    padding-top: 0;
+    padding-bottom: 0;
+    background: #F4F4F4;
+    outline: 1px #000 solid;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.info h3 {
+    padding: 3% 5%;
+    background-color: #E5E5E5;
+    display: inline-block;
+    outline: 1px #000 solid;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+/* ----- Artwork ----- */
+
+.main-one,
+.info {
+    height: 80vh;
+}
+
+.main-one {
+    grid-area: main-one;
+    /* background-color: #000; */
+    outline: 1px #000 solid;
+}
+
+.artwork {
+    width: 100%;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.artist-blurb {
+    box-sizing: border-box;
+    padding-top: 7em;
+    overflow: scroll;
+}
+
+/* ----- Artist Name ----- */
+.main-two {
+    grid-area: main-two;
+    background-color: #000;
+    padding: 12px 2% 12px 2%;
+    outline: 1px #000 solid;
+    margin-top: 1px;
+}
+
+#collaborators-number {
+    font-family: "Trailmix";
+}
+
+#collaborators-right,
+#name-right {
+    float: right;
+    font-weight: 400;
+}
+
+h1#name-right,
+h1#number {
+    color: #000;
+}
+
+.yellow {
+    background-color: #FFF231;
+}
+
+.pink {
+    background-color: #FF83EC;
+}
+
+/* ----- Artist's Social ----- */
+.main-three {
+    grid-area: main-three;
+    height: 80vh;
+    outline: 1px #000 solid;
+}
+
+iframe {
+    width: 100%;
+    height: 80vh;
+    border: none;
+}
+
+#split-iframe {
+    width: 50%;
+    float: left;
+}
+
+/* ----- Collaborators  ----- */
+.main-four {
+    grid-area: main-four;
+    height: 100%;
+    outline: 1px #000 solid;
+    background-color: #F4F4F4;
+}
+
+.column-container {
+    display: grid;
+    grid-column-gap: 0;
+    grid-template-columns: auto auto auto;
+}
+
+.column-item {
+    padding: 4%;
+}
+
+ol {
+    list-style: none;
+    counter-reset: my-awesome-counter;
+}
+
+ol li {
+    counter-increment: my-awesome-counter;
+    padding: 1.4%;
+    font-size: 1.5em;
+}
+
+ol li::before {
+    content: counter(my-awesome-counter) " ";
+    font-size: 2em;
+    padding-right: 4%;
+}
+
+/* ----- Colophon ----- */
+
+#colophon-right {
+    font-weight: 400;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+}
+
+.main-five {
+    grid-area: main-five;
+    height: 80vh;
+    background-color: #000;
+    padding: 4%;
+    position: relative;
+
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+}
+
+.main-five h2,
+.main-five p  {
+    color: #fff;
+}
+
+.main-five h2 {
+    padding-bottom: 1.2em;
+}
+
+.main-five p {
+    font-size: 1.2em;;
+    line-height: 0.8em;
+    padding-bottom: 1em;
+    text-indent: 8%;
+}
+
+#team-title {
+    margin-left: -8%;
+}
+
+.item h2 {
+    padding-top: 8%;
+    float: none;
+}
+
+#typefaces-container {
+    margin-top: 10px;
+}
+
+#printed-container {
+    margin-top: 14%;
+}
+
+.item-container {
+    display: grid;
+    grid-column-gap: 20px;
+    grid-template-columns: auto auto;
+    width: 80%;
+}
+
+#trail-mix {
+    font-size: 2em;
+}
+
+/* ----- dropdown ----- */
+#dropdown-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    overflow-y: scroll;
+    background-color: #F4F4F4;
+}
+
+#dropdown-container::-webkit-scrollbar {
+    width: 0px;
+    background: transparent; /* make scrollbar transparent */
+}
+
+.dropdown-main-five {
+    grid-area: main-five;
+    background-color: #E5E5E5;
+    padding: 2%;
+    position: relative;
+    outline: 1px #000 solid;
+}
+
+.grey {
+    background-color: #E5E5E5;
+    padding: 2%;
+    margin-bottom: 1px;
+}
+
+#readmore {
+    padding: 0;
+    font-size: 1.5em;
+    float: right;
+    border-bottom: 1px #000 solid;
+    line-height: 1em;
+    margin-top: 0.5%;
 }
 
 /* ---------------------- SMALL SCREENS---------------------- */
 @media screen and (max-width: 768px) {
-    /* smartphones */
+/* smartphones */
 
-    .container {
-        grid-template-areas:
-          "main-one"
-          "info"
-          "main-two"
-          "main-three";
-    
-        grid-template-columns: 1fr;
-        grid-template-rows:
-          auto /* main-one */
-          auto
-          auto
-          auto
-          auto;
-      }
+.container {
+    display: block;
+    grid-template-areas:
+        "main-one"
+        "info"
+        "main-two"
+        "main-three";
+
+    grid-template-columns: 1fr;
+    grid-template-rows:
+        auto /* main-one */
+        auto
+        auto
+        auto
+        auto;
+    }
 }
