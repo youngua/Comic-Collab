@@ -265,6 +265,12 @@ header {
     right: 0;
 }
 
+.artist-blurb {
+    box-sizing: border-box;
+    padding-top: 7em;
+    overflow: scroll;
+}
+
 /* ----- Artwork ----- */
 
 .main-one,
@@ -283,12 +289,6 @@ header {
     height: 100%;
     display: block;
     margin: 0 auto;
-}
-
-.artist-blurb {
-    box-sizing: border-box;
-    padding-top: 7em;
-    overflow: scroll;
 }
 
 /* ----- Artist Name ----- */
@@ -486,20 +486,90 @@ ol li::before {
 @media screen and (max-width: 768px) {
 /* smartphones */
 
-.container {
-    display: block;
-    grid-template-areas:
-        "main-one"
-        "info"
-        "main-two"
-        "main-three";
+    /* ----- Global metrics ----- */
+    h2 {
+        font-size: 30px;
+    }
 
-    grid-template-columns: 1fr;
-    grid-template-rows:
-        auto /* main-one */
-        auto
-        auto
-        auto
-        auto;
+    h3 {
+        margin-bottom: 40px;
+    }
+
+    /* ----- Header ----- */
+    header {    
+        padding: 4% 2%;
+    }
+    
+    /* ----- Buttons ----- */
+    #arrow-left {
+        margin-left: 14%;
+    }
+
+    #arrow-right {
+        margin-right: 14%;
+    }
+
+    #arrow-left-white {
+        margin-left: 14%;
+    }
+
+    #arrow-right-white {
+        margin-right: 14%;
+    }
+    
+    button {
+        width: 50%;
+        height: 12%;
+        bottom: 0;
+        top: unset;
+    }
+
+    /* ----- Container ----- */
+    .container {
+        display: block;
+        grid-template-areas:
+            "main-one"
+            "aside"
+            "main-two"
+            "main-three"
+            "main-four"
+            "main-five";
+
+        grid-template-columns: 1fr;
+        grid-template-rows:
+            auto
+            auto
+            auto
+            auto
+            auto
+            auto;
+        
+        margin: 15.4% auto;
+    }
+
+    /* ----- Info ----- */
+    .info {
+        display: block;
+        padding: 0;
+    }
+
+    .info h3 {
+        width: 100vw;
+        position: relative;
+    }
+    
+    .artist-blurb {
+        padding: 0 5% 0 5%;
+    }
+
+    /* ----- Artwork ----- */
+    .main-one,
+    .info {
+        height: auto;
+    }
+
+    .artwork {
+        width: 100%;
+        height: auto;
     }
 }
