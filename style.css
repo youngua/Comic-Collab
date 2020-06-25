@@ -495,8 +495,7 @@ ol li::before {
 
     /* ----- Header ----- */
     header {    
-        /* padding: 4% 2%; */
-        padding: 0;
+        padding: 4% 2%;
     }
     
     /* ----- Buttons ----- */
@@ -543,7 +542,7 @@ ol li::before {
             auto
             auto;
         
-        margin: 16.8% 0 28% 0;
+        margin: 16.3% 0 20% 0;
     }
 
     /* ----- Info ----- */
