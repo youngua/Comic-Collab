@@ -42,7 +42,8 @@ h3 {
 }
 
 h3,
-#number,
+#number, 
+#collaborators-number,
 ol li::before, 
 #trail-mix, 
 .dropdown-about { 
@@ -300,10 +301,6 @@ header {
     margin-top: 1px;
 }
 
-#collaborators-number {
-    font-family: "Trailmix";
-}
-
 #collaborators-right,
 #name-right {
     float: right;
@@ -353,9 +350,6 @@ iframe {
     display: grid;
     grid-column-gap: 0;
     grid-template-columns: auto auto auto;
-}
-
-.column-item {
     padding: 4%;
 }
 
@@ -487,8 +481,12 @@ ol li::before {
 /* smartphones */
 
     /* ----- Global metrics ----- */
-    h2 {
+    h1 { 
         font-size: 30px;
+    }
+
+    h2 {
+        font-size: 25px;
     }
 
     h3 {
@@ -544,11 +542,12 @@ ol li::before {
             auto
             auto;
         
-        margin: 15.4% auto;
+        margin: 16.8% 0 28% 0;
     }
 
     /* ----- Info ----- */
     .info {
+        grid-area: aside;
         display: block;
         padding: 0;
     }
@@ -556,10 +555,11 @@ ol li::before {
     .info h3 {
         width: 100vw;
         position: relative;
+        padding: 4%;
     }
     
     .artist-blurb {
-        padding: 0 5% 0 5%;
+        padding: 0 4% 0 4%;
     }
 
     /* ----- Artwork ----- */
@@ -571,5 +571,41 @@ ol li::before {
     .artwork {
         width: 100%;
         height: auto;
+    }
+
+    /* ----- Artist Name ----- */
+    .main-two {
+       position: relative;
+       padding: 4%;
+    }
+    #collaborators-right {
+        float: none;
+        padding-left: 16%;
+    }
+
+    #name-right {
+        float: none;
+        padding-left: 12%;
+    }
+
+    /* ----- Collaborators  ----- */
+    .column-container {
+        display: block;
+    }
+
+    ol li {
+        font-size: 1.2em;
+    }
+
+    /* ----- Colophon ----- */
+
+    .main-five p  {
+        font-size: 1em;
+    }
+
+    .item-container {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 100%;
     }
 }
