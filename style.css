@@ -629,7 +629,7 @@ ol li::before {
 
     /* ----- dropdown ----- */
     #dropdown-container {
-        margin: 16% 0 24% 0;
+        margin: 16% 0 20% 0;
         grid-template-columns: auto;
     }
 }
