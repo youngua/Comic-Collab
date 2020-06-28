@@ -265,6 +265,14 @@ header {
     right: 0;
 }
 
+#content-desktop {
+    display: block;
+}
+
+#content-mobile {
+    display: none;
+}
+
 .artist-blurb {
     box-sizing: border-box;
     padding-top: 11em;
@@ -553,6 +561,14 @@ ol li::before {
         padding: 4%;
         box-sizing: border-box;
     }
+
+    #content-desktop {
+        display: none;
+    }
+
+    #content-mobile {
+        display: block;
+    }
     
     .artist-blurb {
         padding: 0 4% 0 4%;
@@ -613,8 +629,7 @@ ol li::before {
 
     /* ----- dropdown ----- */
     #dropdown-container {
-        margin: 16% 0 26% 0;
+        margin: 16% 0 24% 0;
         grid-template-columns: auto;
     }
-
 }
