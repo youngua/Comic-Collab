@@ -38,7 +38,6 @@ h2 {
 
 h3 {
     font-size: 50px;
-    margin-bottom: 140px;
 }
 
 h3,
@@ -268,7 +267,7 @@ header {
 
 .artist-blurb {
     box-sizing: border-box;
-    padding-top: 7em;
+    padding-top: 11em;
     overflow: scroll;
 }
 
@@ -439,7 +438,7 @@ ol li::before {
 #dropdown-container {
     display: none;
     position: fixed;
-    top: 0;
+    top: -1px;
     right: 0;
     left: 0;
     bottom: 0;
@@ -487,10 +486,6 @@ ol li::before {
 
     h2 {
         font-size: 25px;
-    }
-
-    h3 {
-        margin-bottom: 40px;
     }
 
     /* ----- Header ----- */
@@ -561,6 +556,7 @@ ol li::before {
     
     .artist-blurb {
         padding: 0 4% 0 4%;
+        padding-top: 2em;
     }
 
     /* ----- Artwork ----- */
@@ -589,6 +585,11 @@ ol li::before {
         padding-left: 12%;
     }
 
+    /* ----- Artist's Social ----- */
+    #split-iframe {
+        width: 100%;
+    }
+
     /* ----- Collaborators  ----- */
     .column-container {
         display: block;
@@ -609,4 +610,11 @@ ol li::before {
         flex-direction: column-reverse;
         width: 100%;
     }
+
+    /* ----- dropdown ----- */
+    #dropdown-container {
+        margin: 16% 0 26% 0;
+        grid-template-columns: auto;
+    }
+
 }
