@@ -497,7 +497,7 @@ ol li::before {
     }
 
     /* ----- Header ----- */
-    header {    
+    header {   
         padding: 4% 2%;
     }
     
@@ -528,23 +528,7 @@ ol li::before {
     /* ----- Container ----- */
     .container {
         display: block;
-        grid-template-areas:
-            "main-one"
-            "aside"
-            "main-two"
-            "main-three"
-            "main-four"
-            "main-five";
 
-        grid-template-columns: 1fr;
-        grid-template-rows:
-            auto
-            auto
-            auto
-            auto
-            auto
-            auto;
-        
         margin: 16.3% 0 16% 0;
     }
 
@@ -639,7 +623,49 @@ ol li::before {
 
 /* Landscape */
 @media only screen 
-  and (min-device-width: 768px) 
-  and (orientation: landscape) {
+    and (min-device-width: 768px)   
+    and (max-device-width: 1024px)  
+    and (orientation: landscape) {
+
+    /* ----- Buttons ----- */
+
+    #arrow-left,
+    #arrow-left-white {
+        margin-left: 2.5vw;
+    }
+
+    #arrow-right,
+    #arrow-right-white {
+        margin-right: 2.5vw;
+    }
+
+    button {
+        width: 7vw;
+    }
+
+    /* ----- Header ----- */
+    header { 
+        display: none;
+    } 
+
+    #dialogues-header {
+        margin-left: 7%;
+    }
+
+    #spring-right {  
+        margin-right: 7%;
+    }
+
+    /* ----- Container ----- */
+    .container,
+    #dropdown-container {
+        display: block;
+        margin: 0 7% auto 7%;
+    }
+
+    /* ----- Artwork ----- */
+    .main-one {
+        height: 100vh;
+    }
 
 }
