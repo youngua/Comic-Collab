@@ -630,5 +630,6 @@ ol li::before {
     #dropdown-container {
         margin: 16% 0 22% 0;
         grid-template-columns: auto;
+        z-index: 2;
     }
 }
