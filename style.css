@@ -281,14 +281,12 @@ header {
 
 /* ----- Artwork ----- */
 
-.main-one,
 .info {
     height: 80vh;
 }
 
 .main-one {
     grid-area: main-one;
-    /* background-color: #000; */
     outline: 1px #000 solid;
     background-color: #000;
 }
@@ -576,14 +574,15 @@ ol li::before {
     }
 
     /* ----- Artwork ----- */
-    .main-one,
+    
     .info {
         height: auto;
     }
 
     .artwork {
         width: 100%;
-        height: auto;
+        height: 100%;
+        object-fit: cover;
     }
 
     /* ----- Artist Name ----- */
