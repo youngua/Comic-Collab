@@ -624,8 +624,8 @@ ol li::before {
 
 /* Landscape */
 @media only screen 
-    and (min-device-width: 768px)   
-    and (max-device-width: 1024px)  
+    and (min-width: 768px)   
+    and (max-width: 1024px)  
     and (orientation: landscape) {
 
     /* ----- Global metrics ----- */
@@ -687,6 +687,19 @@ ol li::before {
     #name-right {
         float: none;
         padding-left: 12%;
+    }
+
+    /* ----- Collaborators  ----- */
+
+    ol li {
+        font-size: 1em;
+    }
+
+    /* ----- dropdown ----- */
+    #dropdown-container {
+        margin: 16% 0 22% 0;
+        grid-template-columns: auto;
+        /* z-index: 2; */
     }
 
 }
