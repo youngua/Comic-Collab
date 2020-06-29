@@ -482,8 +482,10 @@ ol li::before {
 }
 
 /* ---------------------- SMALL SCREENS---------------------- */
-@media screen and (max-width: 768px) {
-/* smartphones */
+@media screen 
+    and (max-width: 768px) 
+    and (orientation: portrait) { 
+/* ipad */
 
     /* ----- Global metrics ----- */
     h1 { 
@@ -543,7 +545,7 @@ ol li::before {
             auto
             auto;
         
-        margin: 16.3% 0 20% 0;
+        margin: 16.3% 0 16% 0;
     }
 
     /* ----- Info ----- */
@@ -624,6 +626,7 @@ ol li::before {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
+        margin-bottom: 14%;
     }
 
     /* ----- dropdown ----- */
@@ -632,4 +635,11 @@ ol li::before {
         grid-template-columns: auto;
         z-index: 2;
     }
+}
+
+/* Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (orientation: landscape) {
+
 }
