@@ -576,6 +576,7 @@ ol li::before {
        position: relative;
        padding: 4%;
     }
+
     #collaborators-right {
         float: none;
         padding-left: 16%;
@@ -627,6 +628,15 @@ ol li::before {
     and (max-device-width: 1024px)  
     and (orientation: landscape) {
 
+    /* ----- Global metrics ----- */
+    h1 { 
+        font-size: 3.5em;
+    }
+
+    h2 {
+        font-size: 25px;
+    }
+
     /* ----- Buttons ----- */
 
     #arrow-left,
@@ -645,7 +655,7 @@ ol li::before {
 
     /* ----- Header ----- */
     header { 
-        display: none;
+        /* display: none; */
     } 
 
     #dialogues-header {
@@ -666,6 +676,17 @@ ol li::before {
     /* ----- Artwork ----- */
     .main-one {
         height: 100vh;
+    }
+
+    /* ----- Artist Name ----- */
+    #collaborators-right {
+        float: none;
+        padding-left: 16%;
+    }
+
+    #name-right {
+        float: none;
+        padding-left: 12%;
     }
 
 }
