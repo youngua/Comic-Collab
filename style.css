@@ -382,7 +382,6 @@ ol li::before {
 }
 
 /* ----- Colophon ----- */
-
 #colophon-right {
     font-weight: 400;
     position: absolute;
@@ -599,7 +598,7 @@ ol li::before {
 
     /* ----- Header ----- */
     header {   
-        padding: 4% 2%;
+        padding: 4% 0;
     }
     
     /* ----- Buttons ----- */
@@ -702,16 +701,30 @@ ol li::before {
     }
 
     /* ----- Colophon ----- */
+    #colophon-right {
+        top: 4%;
+        right: 4%;
+    }
+
+    .main-five {
+        height: auto;
+    }
 
     .main-five p  {
-        font-size: 1em;
+        font-size: 14px;
+    }
+
+    #typefaces-container,
+    #printed-container {
+        margin-top: 0;
     }
 
     .item-container {
         display: flex;
         flex-direction: column-reverse;
         width: 100%;
-        margin-bottom: 14%;
+        margin-bottom: 4%;
+        margin-top: 22%;
     }
 
     /* ----- dropdown ----- */
