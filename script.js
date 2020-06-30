@@ -21,7 +21,7 @@ function toggleMenu() {
 /*
  * Defines the media queries for small screens
  */
-const mobileQ = window.matchMedia("(max-width: 420px)");
+const mobileQ = window.matchMedia("(max-width: 768px)");
 
 /*
  * Defines what should happen for small screens
