@@ -41,3 +41,10 @@ $(document).ready(function () {
         $(".toggle").show();
     }
 });
+
+// Reloads webpage when mobile orientation changes
+window.onorientationchange = function () {
+    window.onorientationchange = function () {
+        window.location.reload();
+    }
+};
