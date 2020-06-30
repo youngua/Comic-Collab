@@ -239,6 +239,21 @@ header {
 }
 
 /* ----- Info ----- */
+/* width */
+.info ::-webkit-scrollbar {
+    display: none;
+  }
+  
+/* Track */
+/* .info ::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+} */
+   
+/* Handle */
+/* .info ::-webkit-scrollbar-thumb {
+    background: #888; 
+} */
+
 .info {
     grid-area: aside;
     padding: 5%;
@@ -490,7 +505,7 @@ ol li::before {
 
     /* ----- Global metrics ----- */
     p {
-        font-size: 0.5em;
+        font-size: 0.8em;
         line-height: 1.3em;
     }
 
