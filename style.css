@@ -490,7 +490,7 @@ ol li::before {
 
     /* ----- Global metrics ----- */
     p {
-        font-size: 0.8em;
+        font-size: 0.5em;
         line-height: 1.3em;
     }
 
@@ -499,7 +499,7 @@ ol li::before {
     }
 
     h2 {
-        font-size: 1.6em;
+        font-size: 1.2em;
     }
 
     h3 {
