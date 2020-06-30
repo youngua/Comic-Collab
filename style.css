@@ -16,7 +16,7 @@
 
 p {
     font-weight: 400;
-    font-size: 1em;
+    font-size: 14px;
     line-height: 1.4em;
     padding-bottom: 1.5em;
 }
@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-    font-size: 2.2em;
+    font-size: 26px;
     display: block;
     float: left;
 }
@@ -244,16 +244,6 @@ header {
     display: none;
   }
   
-/* Track */
-/* .info ::-webkit-scrollbar-track {
-    background: #f1f1f1; 
-} */
-   
-/* Handle */
-/* .info ::-webkit-scrollbar-thumb {
-    background: #888; 
-} */
-
 .info {
     grid-area: aside;
     padding: 5%;
@@ -504,11 +494,6 @@ ol li::before {
     and (orientation: landscape) {
 
     /* ----- Global metrics ----- */
-    p {
-        font-size: 0.8em;
-        line-height: 1.3em;
-    }
-
     h1 {
         font-size: 3.2em;
     }
