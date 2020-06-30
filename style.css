@@ -59,10 +59,6 @@ a {
     cursor: pointer;
 }
 
-#link {
-    margin-top: -2%;
-}
-
 /* ---------------------- Buttons ---------------------- */
 
 #arrow-left {
@@ -493,6 +489,11 @@ ol li::before {
     and (orientation: landscape) {
 
     /* ----- Global metrics ----- */
+    p {
+        font-size: 0.8em;
+        line-height: 1.3em;
+    }
+
     h1 {
         font-size: 3.2em;
     }
