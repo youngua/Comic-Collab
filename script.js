@@ -21,7 +21,10 @@ function toggleMenu() {
 /*
  * Defines the media queries for small screens
  */
-const mobileQ = window.matchMedia("(max-width: 768px)");
+var mobileQ = [
+    window.matchMedia("(min-height: 1084px)"),
+    window.matchMedia("(max-width: 768px)")
+]
 
 /*
  * Defines what should happen for small screens
@@ -29,7 +32,7 @@ const mobileQ = window.matchMedia("(max-width: 768px)");
 $(document).ready(function () {
 
     // triggers the menu dropdown
-    if (mobileQ.matches) {
+    if (mobileQ[0].matches || mobileQ[1].matches) {
 
         $(".toggle").hide();
         $(".mobile-nav").click(function () {
