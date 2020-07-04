@@ -128,7 +128,7 @@ button {
     cursor: pointer;
     height: 100%;
     top: 0;
-    z-index: 2;
+    z-index: 3;
     outline: 1px #000 solid;
     float:left;
 }
@@ -171,16 +171,12 @@ button {
 
 /* ----- Header ----- */
 header {
-    box-sizing: border-box;
+    grid-area: header;
     background-color: #F4F4F4;
-    position: fixed;
-    top: 0;
-    right: 0;
     padding: 1% 2%;
     outline: 1px #000 solid;
-    z-index: 1;
-    width: 100%;
     cursor: pointer;
+    width: auto;
 }
 
 .pink-header {
@@ -210,13 +206,11 @@ header {
 }
 
 #dialogues-header {
-    margin-left: 4%;
     font-weight: 500;
 }
 
 #spring-right {  
     float: right;
-    margin-right: 3.5%;
     font-weight: 300;
 }
 
@@ -226,6 +220,7 @@ header {
     display: grid;
 
     grid-template-areas:
+    "header header"
     "main-one aside"
     "main-two main-two"
     "main-three main-three"
@@ -235,7 +230,7 @@ header {
     grid-template-columns: 3fr 1.3fr;
     grid-template-rows: auto;
     grid-gap: 0;
-    margin: 4.6% 4% auto 4%;
+    margin: 0 4% auto 4%;
 }
 
 /* ----- Info ----- */
@@ -547,7 +542,7 @@ ol li::before {
     .container,
     #dropdown-container {
         grid-template-columns: 3fr 1.5fr;
-        margin: 7% 4% auto 4%;
+        margin: 0 4% auto 4%;
     }
 
     /* ----- Info ----- */
@@ -580,6 +575,11 @@ ol li::before {
 
     .item-container {
         width: 100%;
+    }
+
+    /* ----- Dropdown  ----- */
+    #readmore {
+        font-size: 1em;
     }
 }
 
@@ -628,7 +628,7 @@ ol li::before {
     /* ----- Container ----- */
     .container {
         display: block;
-        margin: 16.3% 0 16% 0;
+        margin: 0 0 16% 0;
     }
 
     /* ----- Info ----- */
@@ -733,6 +733,10 @@ ol li::before {
         grid-template-columns: auto;
         z-index: 2;
     }
+
+    #readmore {
+        font-size: 1em;
+    }
 }
 
 @media screen 
@@ -778,5 +782,22 @@ and (orientation: portrait) {
         width: 100%;
         margin-bottom: 4%;
         margin-top: 22%;
+    }
+
+    /* ----- Colophon ----- */
+    .menu-about {
+        font-size: 1.3em;
+        text-align: left;
+        display: block;
+        width: 70%;
+    }
+
+    #readmore {
+        font-size: 1em;
+        margin-top: 6%;
+    }
+
+    .dropdown-main-five {
+        padding: 4%;
     }
 }

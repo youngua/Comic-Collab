@@ -45,6 +45,20 @@ $(document).ready(function () {
     }
 });
 
+/*
+ * fixed the header when user scroll
+ */
+var elementPosition = $('header').offset();
+
+$(window).scroll(function () {
+    if ($(window).scrollTop() > elementPosition.top) {
+        $('header').css({ 'position': 'fixed', 'top': '0', 'width': '88%', 'z-index': '2' });
+
+    } else {
+        $('header').css({ 'position': 'static', 'width': 'auto' });
+    }
+});
+
 // Reloads webpage when mobile orientation changes
 window.onorientationchange = function () {
     window.onorientationchange = function () {
