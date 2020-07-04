@@ -59,6 +59,25 @@ a {
     cursor: pointer;
 }
 
+.link:hover {
+    text-align: center;
+    
+    color: #FFF231;
+	background-image: -webkit-linear-gradient(92deg, #FFF231, #FF83EC);
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	-webkit-animation: hue 2s infinite linear;
+}
+
+@-webkit-keyframes hue {
+    from {
+      -webkit-filter: hue-rotate(0deg);
+    }
+    to {
+      -webkit-filter: hue-rotate(-360deg);
+    }
+  }
+
 /* ---------------------- Buttons ---------------------- */
 
 #arrow-left {
@@ -444,7 +463,7 @@ ol li::before {
 #dropdown-container {
     display: none;
     position: fixed;
-    top: -1px;
+    top: 0;
     right: 0;
     left: 0;
     bottom: 0;
@@ -479,6 +498,10 @@ ol li::before {
     border-bottom: 1px #000 solid;
     line-height: 1em;
     margin-top: 0.5%;
+}
+
+#readmore:hover {
+    border-bottom: 1px #FF83EC solid;
 }
 
 /* ---------------------- SMALL SCREENS---------------------- */
