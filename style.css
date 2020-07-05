@@ -197,19 +197,7 @@ header {
     cursor: pointer;
     width: auto;
     z-index: 2;
-}
-
-/* #dropdown-container {
-    display: none;
-    position: fixed;
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
-    max-height: 100%;
-    overflow-y: scroll;
-    background-color: #F4F4F4;
-} */
+}d
 
 .pink-header {
     background-color: #FF83EC;
@@ -263,10 +251,6 @@ header {
     grid-template-rows: auto;
     grid-gap: 0;
     margin: 0 4% auto 4%;
-}
-
-.container {
-  
 }
 
 /* ----- Info ----- */
@@ -326,6 +310,8 @@ header {
     grid-area: main-one;
     outline: 1px #000 solid;
     background-color: #000;
+    display: flex;
+    margin-top: 1px;
 }
 
 .artwork {
