@@ -1,10 +1,3 @@
-/*
- * Taken from w3schools website: 
- * https://www.w3schools.com/w3css/tryit.asp?filename=tryw3css_slideshow_self
- *
- * The code below - when the right or left arrows are clicked, the entire html page (each is its own slideshow), turns to the next page.
- */
-
 /* 
  * Toggles the menu.
  */
@@ -49,6 +42,9 @@ $(document).ready(function () {
     }
 });
 
+// side note: may have to implement a condition for browser check https://stackoverflow.com/questions/4565112/javascript-how-to-find-out-if-the-user-browser-is-chrome/13348618#13348618
+
+
 /*
  * fixed the header when user scroll
  */
@@ -56,57 +52,40 @@ var elementPosition = $('header').offset();
 
 $(window).scroll(function () {
 
-    // if the page is portrait then make header scrollable
-    if ($(window).scrollTop() > elementPosition.top && mobileP[0].matches || mobileP[1].matches) {
-        $('header').css({
-            'position': 'fixed',
-            'top': '0',
-            'left': '0',
-            'right': '0',
-            'padding': '2% 2%',
-            'z-index': '2'
-        });
+    // if the page scroll then fixed the header to the top
+    if ($(window).scrollTop() > elementPosition.top) {
 
-        $('#dialogues-header').css({
-            'margin-left': '2%',
-        });
+        // if the page is portrait then make header scrollable
+        if (mobileP[0].matches || mobileP[1].matches) {
+            $('header').css({
+                'position': 'fixed',
+                'left': '0',
+                'right': '0',
+                'padding': '2% 2%',
+            });
 
-        $('#spring-right').css({
-            'margin-right': '2%',
-        });
+            $('#dialogues-header').css({
+                'margin-left': '2%',
+            });
 
-    } else {
-        $('header').css({
-            'position': 'static',
-            'width': 'auto',
-            'padding': '2% 2%',
-        });
-    }
+            $('#spring-right').css({
+                'margin-right': '2%',
+            });
 
-    // if the page is landscape then make header scrollable
-    if ($(window).scrollTop() > elementPosition.top && mobileL.matches) {
+            // if the page is landscape then make header scrollable
+        } else if (mobileL.matches) {
 
-        $('header').css({
-            'position': 'fixed',
-            'top': '0',
-            'width': '100%',
-            'padding': '1% 2%',
-            'z-index': '2'
-        });
+            $('header').css({
+                'position': 'fixed',
+                'width': '100%',
+            });
 
-        $('#spring-right').css({
-            'margin-right': '4%',
-        });
+        }
     } else {
 
         $('header').css({
             'position': 'static',
             'width': 'auto',
-            'padding': '1% 2%'
-        });
-
-        $('#spring-right').css({
-            'margin-right': 'auto',
         });
     }
 });
@@ -123,7 +102,7 @@ window.onorientationchange = function () {
 /*
  * disable page scroll when scrolling a div
  */
-var $div = $('#dropdown-container');
+var $div = $('#dropdown-container, header');
 $div.on('mousewheel DOMMouseScroll', function (e) {
     var d = e.originalEvent.wheelDelta || -e.originalEvent.detail,
         dir = d > 0 ? 'up' : 'down',

@@ -195,9 +195,10 @@ header {
     padding: 1% 2%;
     outline: 1px #000 solid;
     cursor: pointer;
-    width: auto;
+    width: 100%;
     z-index: 2;
-}d
+    box-sizing: border-box;
+}
 
 .pink-header {
     background-color: #FF83EC;
@@ -608,6 +609,63 @@ ol li::before {
         font-size: 1em;
     }
 }
+
+@media screen 
+    and (max-width: 768px) 
+    and (orientation: landscape) {
+
+    /* ----- Global metrics  ----- */
+    h1 {
+        font-size: 2.5em;
+    }
+
+    /* ----- Buttons  ----- */
+    #arrow-left {
+        border: 10px solid;
+        border-color: 
+        #000
+        #000
+        transparent
+        transparent;
+    }
+
+    #arrow-right {
+        border: 10px solid;
+        border-color: 
+        #000
+        #000
+        transparent
+        transparent;
+    }
+
+    #arrow-left-white {
+        border: 10px solid;
+        border-color: 
+            #fff
+            #fff
+            transparent
+            transparent;
+    }
+
+    #arrow-right-white {
+        border: 10px solid;
+        border-color: 
+            #fff
+            #fff
+            transparent
+            transparent;
+    }
+
+    /* ----- Colophon  ----- */
+    .main-five {
+        height: 100%;
+    }
+
+    .item-container p {
+        font-size: 0.7em;
+    }
+
+    }
 
 @media screen 
     and (max-width: 1200px) 
