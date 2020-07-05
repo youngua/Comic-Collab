@@ -196,7 +196,20 @@ header {
     outline: 1px #000 solid;
     cursor: pointer;
     width: auto;
+    z-index: 2;
 }
+
+/* #dropdown-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    max-height: 100%;
+    overflow-y: scroll;
+    background-color: #F4F4F4;
+} */
 
 .pink-header {
     background-color: #FF83EC;
@@ -250,6 +263,10 @@ header {
     grid-template-rows: auto;
     grid-gap: 0;
     margin: 0 4% auto 4%;
+}
+
+.container {
+  
 }
 
 /* ----- Info ----- */
@@ -616,12 +633,13 @@ ol li::before {
     }
 
     h2 {
-        font-size: 22px;
+        font-size: 23px;
     }
 
     /* ----- Header ----- */
     header {   
-        padding: 4% 0;
+        padding: 2% 4%;
+        display: flow-root;
     }
     
     /* ----- Buttons ----- */
@@ -765,6 +783,7 @@ ol li::before {
 @media screen 
 and (max-width: 736px) 
 and (orientation: portrait) { 
+
     /* ----- Collaborators  ----- */
     .column-container {
         /* display: block; */
