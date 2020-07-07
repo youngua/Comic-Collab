@@ -69,7 +69,7 @@ $(window).scroll(function () {
             });
 
             $('#spring-right').css({
-                'margin-right': '2%',
+                'margin-right': '-7%',
             });
 
         }
@@ -78,6 +78,10 @@ $(window).scroll(function () {
         $('header').css({
             'position': 'static',
             'width': 'auto',
+        });
+
+        $('#spring-right').css({
+            'margin-right': '2.2%',
         });
 
     }
@@ -92,9 +96,6 @@ $(window).scroll(function () {
                 'position': 'fixed',
                 'width': '100vw',
                 'padding-right': '10vw',
-            });
-
-            $('#spring-right').css({
             });
         }
 

@@ -684,7 +684,9 @@ ol li::before {
     /* ----- Header ----- */
     header {   
         padding: 2% 4%;
-        display: flow-root;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
     }
     
     /* ----- Buttons ----- */
