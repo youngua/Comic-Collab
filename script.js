@@ -72,14 +72,6 @@ $(window).scroll(function () {
                 'margin-right': '2%',
             });
 
-            // if the page is landscape then make header scrollable
-        } else if (mobileL.matches) {
-
-            $('header').css({
-                'position': 'fixed',
-                'width': '100%',
-            });
-
         }
     } else {
 
@@ -87,7 +79,35 @@ $(window).scroll(function () {
             'position': 'static',
             'width': 'auto',
         });
+
     }
+
+    // mac vs chrome issue
+    if ($(window).scrollTop() > elementPosition.top) {
+
+        // if the page is landscape then make header scrollable
+        if (mobileL.matches) {
+
+            $('header').css({
+                'position': 'fixed',
+                'width': '100vw',
+                'padding-right': '10vw',
+            });
+
+            $('#spring-right').css({
+            });
+        }
+
+    } else {
+
+        $('header').css({
+            'position': 'static',
+            'width': 'auto',
+            'padding-right': '1.8vw',
+        });
+
+    }
+
 });
 
 /*
