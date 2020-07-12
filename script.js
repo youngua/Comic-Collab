@@ -95,7 +95,11 @@ $(window).scroll(function () {
             $('header').css({
                 'position': 'fixed',
                 'width': '100vw',
-                'padding-right': '10vw',
+                // 'padding-right': '10vw',
+            });
+
+            $('#spring-right').css({
+                'margin-right': '8vw',
             });
         }
 
@@ -104,7 +108,10 @@ $(window).scroll(function () {
         $('header').css({
             'position': 'static',
             'width': 'auto',
-            'padding-right': '1.8vw',
+        });
+
+        $('#spring-right').css({
+            'margin-right': '0',
         });
 
     }
