@@ -53,9 +53,7 @@ var elementPosition = $('header').offset();
 
 $(window).scroll(function () {
 
-
     if ($(window).scrollTop() > elementPosition.top) {
-
         if (mobile[3].matches) {
 
             $('header').css({
@@ -87,7 +85,6 @@ $(window).scroll(function () {
             'position': 'fixed',
         });
     }
-
 });
 
 
