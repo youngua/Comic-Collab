@@ -13,15 +13,11 @@ function toggleMenu() {
 
 /*
  * Defines the media queries for small screens
- * mobileP = Portrait
- * mobileL = Landscape
  */
-var mobileP = [
+var mobile = [
     window.matchMedia("(min-height: 1084px)"),
     window.matchMedia("(max-width: 768px)")
 ]
-
-var mobileL = window.matchMedia("(max-width: 2000px)");
 
 /*
  * Defines what should happen for small screens
@@ -29,7 +25,7 @@ var mobileL = window.matchMedia("(max-width: 2000px)");
 $(document).ready(function () {
 
     // triggers the menu dropdown
-    if (mobileP[0].matches || mobileP[1].matches) {
+    if (mobile[0].matches || mobile[1].matches) {
 
         $(".toggle").hide();
         $(".mobile-nav").click(function () {
@@ -44,6 +40,17 @@ $(document).ready(function () {
 
 // side note: may have to implement a condition for browser check https://stackoverflow.com/questions/4565112/javascript-how-to-find-out-if-the-user-browser-is-chrome/13348618#13348618
 
+/*
+ * Defines the media queries for small screens
+ */
+// var mobileR = [
+//     window.matchMedia("(max-height: 1400px)"),
+//     window.matchMedia("(max-width: 1024px)"),
+
+//     window.matchMedia("(min-width: 800px)")
+// ]
+
+var mobileL = window.matchMedia("(max-width: 2000px)");
 
 /*
  * fixed the header when user scroll
@@ -56,7 +63,7 @@ $(window).scroll(function () {
     if ($(window).scrollTop() > elementPosition.top) {
 
         // if the page is portrait then make header scrollable
-        if (mobileP[0].matches || mobileP[1].matches) {
+        if (mobile[0].matches || mobile[1].matches) {
             $('header').css({
                 'position': 'fixed',
                 'left': '0',
@@ -117,6 +124,7 @@ $(window).scroll(function () {
     }
 
 });
+
 
 /*
  * Reloads webpage when mobile orientation changes
