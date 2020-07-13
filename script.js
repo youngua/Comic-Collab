@@ -16,7 +16,8 @@ function toggleMenu() {
  */
 var mobile = [
     window.matchMedia("(min-height: 1084px)"),
-    window.matchMedia("(max-width: 768px)")
+    window.matchMedia("(max-width: 768px)"),
+    window.matchMedia("(max-height: 414px)")
 ]
 
 /*
@@ -25,7 +26,7 @@ var mobile = [
 $(document).ready(function () {
 
     // triggers the menu dropdown
-    if (mobile[0].matches || mobile[1].matches) {
+    if (mobile[0].matches || mobile[1].matches && !(mobile[2].matches)) {
 
         $(".toggle").hide();
         $(".mobile-nav").click(function () {
@@ -33,8 +34,10 @@ $(document).ready(function () {
 
             $(".toggle").animate({ height: "toggle" });
         });
+
     } else {
         $(".toggle").show();
+
     }
 });
 
