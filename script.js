@@ -129,11 +129,23 @@ $(window).scroll(function () {
 /*
  * Reloads webpage when mobile orientation changes
  */
-window.onorientationchange = function () {
-    window.onorientationchange = function () {
-        window.location.reload();
+// window.onorientationchange = function () {
+//     window.onorientationchange = function () {
+//         window.location.reload();
+//     }
+// };
+
+jQuery(document).ready(function ($) {
+    orientationChange();
+});
+
+function orientationChange() {
+    if (window.addEventListener) {
+        window.addEventListener("orientationchange", function () {
+            location.reload();
+        });
     }
-};
+}
 
 /*
  * disable page scroll when scrolling a div
