@@ -195,11 +195,10 @@ header {
     padding: 1% 2%;
     outline: 1px #000 solid;
     cursor: pointer;
-    width: 100%;
+    width: 100vw;
     z-index: 2;
     box-sizing: border-box;
-    display: flex;
-    justify-content: space-between;
+    height: 4vw;
 }
 
 .pink-header {
@@ -229,11 +228,14 @@ header {
 }
 
 #dialogues-header {
+    position: absolute;
+    left: 6vw;
     font-weight: 500;
 }
 
 #spring-right {  
-    position: relative;
+    position: absolute;
+    right: 6vw;
     font-weight: 300;
 }
 
@@ -665,6 +667,11 @@ ol li::before {
             transparent;
     }
 
+     /* ----- Header ----- */
+     header {
+        height: 9vh;
+    }
+
     /* ----- Colophon  ----- */
     .main-five {
         height: 100%;
@@ -686,17 +693,22 @@ ol li::before {
     }
 
     h2 {
-        font-size: 23px;
+        font-size: 22px;
     }
 
     /* ----- Header ----- */
     header {   
-        padding: 2% 4%;
-        box-sizing: border-box;
-        display: flex;
-        justify-content: space-between;
+        padding: 2% 2%;
+        height: 6vh;
+    }
+
+    #dialogues-header {
+        left: 4vw;
     }
     
+    #spring-right {  
+        right: 4vw;
+    }
     /* ----- Buttons ----- */
     #arrow-left {
         margin-left: 14%;
