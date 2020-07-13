@@ -825,7 +825,7 @@ ol li::before {
 
     /* ----- dropdown ----- */
     #dropdown-container {
-        margin: 0 0 16% 0;
+        margin: 0 0 15% 0;
         grid-template-columns: auto;
         z-index: 2;
     }
@@ -847,8 +847,11 @@ and (orientation: portrait) {
     #fullscreen {
         display: block;
         position: absolute;
+        width: 24px;
         right: 2%;
-        top: 76vw;
+        top: 75vw;
+        background-color: rgba(255, 255, 255, 0.4);
+        border-radius: 10px;
     }
 
     /* ----- Collaborators  ----- */

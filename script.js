@@ -144,7 +144,7 @@ function orientationChange() {
 /*
  * disable page scroll when scrolling a div
  */
-var $div = $('#dropdown-container, header');
+var $div = $('.container, header');
 $div.on('mousewheel DOMMouseScroll', function (e) {
     var d = e.originalEvent.wheelDelta || -e.originalEvent.detail,
         dir = d > 0 ? 'up' : 'down',
@@ -156,6 +156,7 @@ $div.on('mousewheel DOMMouseScroll', function (e) {
  * Fullscreen the artworks
  */
 var elem = document.getElementById("artwork-fullscreen");
+
 function openFullscreen() {
     if (elem.requestFullscreen) {
         elem.requestFullscreen();
@@ -167,3 +168,6 @@ function openFullscreen() {
         elem.msRequestFullscreen();
     }
 }
+
+
+
