@@ -323,6 +323,10 @@ header {
     background-size: cover;
 }
 
+#fullscreen {
+    display: none;
+}
+
 /* ----- Artist Name ----- */
 .main-two {
     grid-area: main-two;
@@ -590,6 +594,10 @@ ol li::before {
         object-fit: contain;
     }
 
+    #fullscreen {
+        display: none;
+    }
+
     /* ----- Collaborators  ----- */
     ol li {
         padding: none;
@@ -830,6 +838,18 @@ ol li::before {
 @media screen 
 and (max-width: 736px) 
 and (orientation: portrait) { 
+
+    /* ----- Artwork  ----- */
+    #artwork-fullscreen {
+        width: 100%;
+    }
+
+    #fullscreen {
+        display: block;
+        position: absolute;
+        right: 2%;
+        top: 76vw;
+    }
 
     /* ----- Collaborators  ----- */
     .column-container {

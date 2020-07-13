@@ -129,12 +129,6 @@ $(window).scroll(function () {
 /*
  * Reloads webpage when mobile orientation changes
  */
-// window.onorientationchange = function () {
-//     window.onorientationchange = function () {
-//         window.location.reload();
-//     }
-// };
-
 jQuery(document).ready(function ($) {
     orientationChange();
 });
@@ -157,3 +151,19 @@ $div.on('mousewheel DOMMouseScroll', function (e) {
         stop = (dir == 'up' && this.scrollTop == 0) || (dir == 'down' && this.scrollTop == this.scrollHeight - this.offsetHeight);
     stop && e.preventDefault();
 });
+
+/*
+ * Fullscreen the artworks
+ */
+var elem = document.getElementById("artwork-fullscreen");
+function openFullscreen() {
+    if (elem.requestFullscreen) {
+        elem.requestFullscreen();
+    } else if (elem.mozRequestFullScreen) { /* Firefox */
+        elem.mozRequestFullScreen();
+    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
+        elem.webkitRequestFullscreen();
+    } else if (elem.msRequestFullscreen) { /* IE/Edge */
+        elem.msRequestFullscreen();
+    }
+}
