@@ -31,7 +31,7 @@ h1 {
 }
 
 h2 {
-    font-size: 26px;
+    font-size: 25px;
     display: block;
     float: left;
 }
@@ -192,13 +192,12 @@ button {
 header {
     grid-area: header;
     background-color: #F4F4F4;
-    padding: 1% 2%;
+    padding: 2vh 2%;
     outline: 1px #000 solid;
     cursor: pointer;
     width: 100vw;
     z-index: 2;
-    box-sizing: border-box;
-    height: 4vw;
+    height: 2vw;
 }
 
 .pink-header {
@@ -698,8 +697,8 @@ ol li::before {
 
     /* ----- Header ----- */
     header {   
-        padding: 2% 2%;
-        height: 6vh;
+        padding: 2vh 2%;
+        height: 2vh;
     }
 
     #dialogues-header {
@@ -709,6 +708,7 @@ ol li::before {
     #spring-right {  
         right: 4vw;
     }
+
     /* ----- Buttons ----- */
     #arrow-left {
         margin-left: 14%;
@@ -850,6 +850,11 @@ ol li::before {
 @media screen 
 and (max-width: 736px) 
 and (orientation: portrait) { 
+
+    /* ----- Header ----- */
+    header {   
+        height: 3vh;
+    }
 
     /* ----- Artwork  ----- */
     #artwork-fullscreen {

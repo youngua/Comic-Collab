@@ -43,9 +43,6 @@ var mobile = [
     window.matchMedia("(max-width: 2000px)"),
 ]
 
-// checks to see if browser is safari
-// var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
-
 /*
  * fixed the header when user scroll
  */
@@ -58,6 +55,8 @@ $(window).scroll(function () {
 
             $('header').css({
                 'position': 'fixed',
+                'left': '0',
+                'right': '0',
                 'width': '100vw',
             });
 
@@ -74,7 +73,7 @@ $(window).scroll(function () {
 
         $('header').css({
             'position': 'static',
-            'width': '100vw',
+            'width': 'auto',
         });
 
         $('#dialogues-header').css({
@@ -130,6 +129,5 @@ function openFullscreen() {
         elem.msRequestFullscreen();
     }
 }
-
 
 
