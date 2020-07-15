@@ -103,15 +103,20 @@ function orientationChange() {
 }
 
 /*
- * disable page scroll when scrolling a div
+ * Disable page scroll when scrolling a div
  */
-// var $div = $('header');
-// $div.on('mousewheel DOMMouseScroll', function (e) {
-//     var d = e.originalEvent.wheelDelta || -e.originalEvent.detail,
-//         dir = d > 0 ? 'up' : 'down',
-//         stop = (dir == 'up' && this.scrollTop == 0) || (dir == 'down' && this.scrollTop == this.scrollHeight - this.offsetHeight);
-//     stop && e.preventDefault();
-// });
+
+/*
+* Locks the orientation when in Fullscreen mode
+*/
+$(document).ready(function () {
+    function reorient(e) {
+        var portrait = (window.orientation % 180 == 0);
+        $("body > div").css("-webkit-transform", !portrait ? "rotate(-90deg)" : "");
+    }
+    window.onorientationchange = reorient;
+    window.setTimeout(reorient, 0);
+});
 
 
 /*

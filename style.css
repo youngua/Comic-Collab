@@ -6,6 +6,8 @@
     font-family: 'Inter', sans-serif;
 }
 
+body > div { -webkit-transition: all 1s ease-in-out; }
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&display=swap');
 
 @font-face {
