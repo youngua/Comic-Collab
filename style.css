@@ -80,7 +80,8 @@ a {
 
 /* ---------------------- Buttons ---------------------- */
 
-#arrow-left {
+#arrow-left,
+#arrow-left-fullscreen {
     display: block;
     margin: auto;
     margin-left: 1.5vw;
@@ -95,7 +96,8 @@ a {
             transform: rotate(225deg);
 }
 
-#arrow-right {
+#arrow-right,
+#arrow-right-fullscreen {
     display: block;
     margin: auto;
     margin-right: 1.5vw;
@@ -110,7 +112,8 @@ a {
             transform: rotate(45deg);
 }
 
-#arrow-left-white {
+#arrow-left-white,
+#arrow-left-white-fullscreen {
     display: block;
     margin: auto;
     margin-left: 1.5vw;
@@ -125,7 +128,8 @@ a {
             transform: rotate(225deg);
 }
 
-#arrow-right-white {
+#arrow-right-white,
+#arrow-right-white-fullscreen {
     display: block;
     margin: auto;
     margin-right: 1.5vw;
@@ -140,7 +144,8 @@ a {
             transform: rotate(45deg);
 }
 
-button {
+button, 
+.button-fullscreen {
     width: 4vw;
     position: fixed;
     border: none;
@@ -152,30 +157,36 @@ button {
     float:left;
 }
 
-#display-left {
+#display-left,
+#display-left-fullscreen {
     left: 0;
     background-color: #FF83EC;
 }
 
-#display-left:hover {
+#display-left:hover,
+#display-left-fullscreen:hover {
     background-color: #5B356F;
 }
 
-#display-right {
+#display-right,
+#display-right-fullscreen {
     right: 0;
     background-color: #FFF231;
 }
 
-#display-right:hover {
+#display-right:hover,
+#display-right-fullscreen:hover {
     background-color: #3957CB;
 }
 
-.display-left-black {
+.display-left-black,
+#display-left-black-fullscreen {
     left: 0;
     background-color: #000;
 }
 
-.display-right-black {
+.display-right-black,
+#display-right-black-fullscreen {
     right: 0;
     background-color: #000;
 }
@@ -322,6 +333,10 @@ header {
     width: 100%;
     height: 100%;
     background-size: cover;
+}
+
+#artwork-container {
+    display: none;
 }
 
 #fullscreen {
@@ -668,7 +683,7 @@ ol li::before {
 
      /* ----- Header ----- */
      header {
-        height: 9vh;
+        height: 6vh;
     }
 
     /* ----- Colophon  ----- */
@@ -728,7 +743,7 @@ ol li::before {
     
     button {
         width: 50%;
-        height: 12%;
+        height: 12vh;
         bottom: 0;
         top: unset;
     }
@@ -854,21 +869,104 @@ and (orientation: portrait) {
     /* ----- Header ----- */
     header {   
         height: 3vh;
+        padding: 2vh 0;
     }
 
-    /* ----- Artwork  ----- */
+    /* ----- Container ----- */
+    #artwork-container {
+        /* display: block; */
+        display: none;
+        background-color: rgb(34, 34, 34);
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        z-index: 3;
+    }
+
+    /* ----- Artwork Fullscreen ----- */
+    #artwork {
+        position: relative;
+    }
+
     #artwork-fullscreen {
-        width: 100%;
+        max-width: 140vw;
+        max-height: 100vh;
+        transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%)) rotate(270deg);
+        object-fit: contain;
+        position: relative;
     }
 
     #fullscreen {
-        display: block;
         position: absolute;
-        width: 24px;
-        right: 2%;
         top: 75vw;
+        display: block;
+    }
+
+    #fullscreen, 
+    #fullscreen-exit {
+        right: 2%;
         background-color: rgba(255, 255, 255, 0.4);
         border-radius: 10px;
+    }
+
+    #fullscreen-exit {
+        top: 20vw;
+        position: absolute;
+    }
+
+    /* ----- Buttons Fullscreen ----- */
+    .button-fullscreen {
+        width: 100vw;
+        height: 6vh;
+        top: unset;
+    }
+
+    #arrow-left-fullscreen,
+    #arrow-left-white-fullscreen {
+        -webkit-transform: rotate(135deg);
+        transform: rotate(135deg);
+        margin: 0 auto;
+        margin-top: -0.8vh;
+    }
+
+    #arrow-right-fullscreen,
+    #arrow-right-white-fullscreen {
+        -webkit-transform: rotate(315deg);
+        transform: rotate(315deg);
+        margin: 0 auto;
+        margin-top: 2.5vh;
+    }
+
+    #arrow-left-fullscreen,
+    #arrow-right-fullscreen {
+        border: 14px solid;
+        border-color: 
+            #000
+            #000
+            transparent
+            transparent;
+    }
+
+    #arrow-left-white-fullscreen,
+    #arrow-right-white-fullscreen {
+        border: 14px solid;
+        border-color: 
+            #fff
+            #fff
+            transparent
+            transparent;
+    }
+
+    #display-left-fullscreen,
+    #display-left-black-fullscreen {
+        bottom: 0;
+    }
+
+    #display-right-fullscreen,
+    #display-right-black-fullscreen {
+        top: 0;
     }
 
     /* ----- Collaborators  ----- */

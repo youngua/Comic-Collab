@@ -113,21 +113,16 @@ function orientationChange() {
 //     stop && e.preventDefault();
 // });
 
+
 /*
  * Fullscreen the artworks
  */
-var elem = document.getElementById("artwork-fullscreen");
-
 function openFullscreen() {
-    if (elem.requestFullscreen) {
-        elem.requestFullscreen();
-    } else if (elem.mozRequestFullScreen) { /* Firefox */
-        elem.mozRequestFullScreen();
-    } else if (elem.webkitRequestFullscreen) { /* Chrome, Safari & Opera */
-        elem.webkitRequestFullscreen();
-    } else if (elem.msRequestFullscreen) { /* IE/Edge */
-        elem.msRequestFullscreen();
+    var x = document.getElementById("artwork-container");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
     }
 }
-
-
