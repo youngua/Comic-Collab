@@ -115,12 +115,36 @@ function orientationChange() {
 /*
  * Fullscreen the artworks
  */
-function openFullscreen() {
-    var x = document.getElementById("artwork-container");
+// function openFullscreen() {
+//     var x = document.getElementById("artwork-container");
 
-    if (x.style.display === "none") {
-        x.style.display = "block";
+//     if (x.style.display === "none") {
+//         x.style.display = "block";
+//     } else {
+//         x.style.display = "none";
+//     }
+// }
+
+
+/*
+ * Fullscreen the artworks V2
+ */
+
+function getFullscreenElement() {
+    return document.fullscreenElement
+        || document.webkitFullscreenElement
+        || document.mozFullscreenElement
+        || document.msFullscreenElement;
+}
+
+function toggleFullscreen() {
+    if (getFullscreenElement()) {
+        document.exitFullscreen();
     } else {
-        x.style.display = "none";
+        document.documentElement.requestFullscreen().catch(console.log);
     }
 }
+
+document.addEventListener("dblclick", () => {
+    toggleFullscreen();
+})

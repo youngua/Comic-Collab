@@ -365,6 +365,7 @@ header {
 
 .yellow {
     background-color: #FFF231;
+    cursor: pointer;
 }
 
 .yellow:hover {
@@ -373,6 +374,7 @@ header {
 
 .pink {
     background-color: #FF83EC;
+    cursor: pointer;
 }
 
 .pink:hover {
