@@ -367,8 +367,16 @@ header {
     background-color: #FFF231;
 }
 
+.yellow:hover {
+    background-color: #3957CB;
+}
+
 .pink {
     background-color: #FF83EC;
+}
+
+.pink:hover {
+    background-color: #5B356F;
 }
 
 /* ----- Artist's Social ----- */
