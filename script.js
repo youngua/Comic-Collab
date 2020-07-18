@@ -145,6 +145,6 @@ function toggleFullscreen() {
     }
 }
 
-document.addEventListener("dblclick", () => {
+function openFullscreen() {
     toggleFullscreen();
-})
+}
