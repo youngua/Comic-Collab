@@ -168,14 +168,16 @@ function openFullscreen() {
         x.style.display = "block";
 
         // disables body from scrolling when menu open
-        // document.documentElement.style.overflow = 'hidden';
-        document.body.scroll = "no";
+        document.documentElement.style.overflow = 'hidden';
+        document.documentElement.style.height = '100%';
+        // document.body.scroll = "no";
 
     } else {
         x.style.display = "none";
 
         // enable scrolling when menu close
-        // document.documentElement.style.overflow = 'scroll';
-        document.body.scroll = "yes";
+        document.documentElement.style.overflow = 'scroll';
+        document.documentElement.style.height = 'auto';
+        // document.body.scroll = "yes";
     }
 }
