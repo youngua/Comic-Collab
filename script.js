@@ -53,6 +53,26 @@ function toggleMenu() {
 }
 
 /*
+ * Toggles the header dropdown for info session
+ */
+$(document).ready(function () {
+
+    // triggers the menu dropdown
+    if (mobile[0].matches && mobile[3].matches) {
+
+        $(".toggle").hide();
+        $(".mobile-nav").click(function () {
+            $(".toggle").toggleClass("x");
+
+            $(".toggle").animate({ height: "toggle" });
+        });
+
+    } else {
+        $(".toggle").show();
+    }
+});
+
+/*
  * fixed the header when user scroll
  */
 var elementPosition = $('header').offset();
