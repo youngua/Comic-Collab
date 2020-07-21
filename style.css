@@ -1,4 +1,4 @@
-/* ---------------------- Global metrics---------------------- */
+/* ---------- Global metrics ---------- */
 
 * {
     margin: 0;
@@ -52,7 +52,7 @@ ol li::before,
     -moz-osx-font-smoothing: grayscale; 
 }
 
-/* ---------------------- links ---------------------- */
+/* ---------- links ---------- */
 a {
     text-decoration: none;
     color: inherit;
@@ -78,7 +78,7 @@ a {
     }
   }
 
-/* ---------------------- Buttons ---------------------- */
+/* ---------- Buttons ---------- */
 
 #arrow-left,
 #arrow-left-fullscreen {
@@ -152,9 +152,9 @@ button,
     cursor: pointer;
     height: 100%;
     top: 0;
-    z-index: 3;
     outline: 1px #000 solid;
     float:left;
+    z-index: 3;
 }
 
 #display-left,
@@ -199,7 +199,7 @@ button,
     background-color: #5B356F;
 }
 
-/* ----- Header ----- */
+/* ---------- Header ---------- */
 header {
     grid-area: header;
     background-color: #F4F4F4;
@@ -207,7 +207,7 @@ header {
     outline: 1px #000 solid;
     cursor: pointer;
     width: 100vw;
-    z-index: 2;
+    z-index: 1;
     height: 2vw;
 }
 
@@ -249,7 +249,7 @@ header {
     font-weight: 300;
 }
 
-/* ----- Container ----- */
+/* ---------- Container ---------- */
 .container,
 #dropdown-container {
     display: grid;
@@ -268,8 +268,7 @@ header {
     margin: 0 4% auto 4%;
 }
 
-/* ----- Info ----- */
-/* width */
+/* ---------- Info ---------- */
 .info ::-webkit-scrollbar {
     display: none;
   }
@@ -314,7 +313,7 @@ header {
     overflow: scroll;
 }
 
-/* ----- Artwork ----- */
+/* ---------- Artwork ---------- */
 
 .main-one, 
 .info {
@@ -343,7 +342,7 @@ header {
     display: none;
 }
 
-/* ----- Artist Name ----- */
+/* ---------- Artist Name ---------- */
 .main-two {
     grid-area: main-two;
     background-color: #000;
@@ -381,7 +380,7 @@ header {
     background-color: #5B356F;
 }
 
-/* ----- Artist's Social ----- */
+/* ---------- Artist's Social ---------- */
 .main-three {
     grid-area: main-three;
     height: 80vh;
@@ -399,7 +398,7 @@ iframe {
     float: left;
 }
 
-/* ----- Collaborators  ----- */
+/* ---------- Collaborators ---------- */
 .main-four {
     grid-area: main-four;
     height: 100%;
@@ -430,7 +429,7 @@ ol li::before {
     font-size: 2em;
 }
 
-/* ----- Colophon ----- */
+/* ---------- Colophon ---------- */
 #colophon-right {
     font-weight: 400;
     position: absolute;
@@ -494,7 +493,7 @@ ol li::before {
     font-size: 2em;
 }
 
-/* ----- dropdown ----- */
+/* ---------- dropdown ---------- */
 #dropdown-container {
     display: none;
     position: fixed;
@@ -502,14 +501,23 @@ ol li::before {
     right: 0;
     left: 0;
     bottom: 0;
-    max-height: 100%;
-    overflow-y: scroll;
+    height: 100vh;
+    overflow-y: auto;
+    z-index: 2;
     background-color: #F4F4F4;
 }
 
 #dropdown-container::-webkit-scrollbar {
     width: 0px;
     background: transparent; /* make scrollbar transparent */
+}
+
+#dropdown-container #dialogues-header {
+    left: 2vw;
+}
+
+#dropdown-container #spring-right {
+    right: 2vw;
 }
 
 .dropdown-main-five {
@@ -545,7 +553,7 @@ ol li::before {
     and (max-width: 1300px) 
     and (orientation: landscape) {
 
-    /* ----- Global metrics ----- */
+    /* ---------- Global metrics ---------- */
     h1 {
         font-size: 3.2em;
     }
@@ -558,7 +566,7 @@ ol li::before {
         font-size: 1.8em;
     }
 
-    /* ----- Buttons ----- */
+    /* ---------- Buttons ---------- */
     #arrow-left {
         border: 14px solid;
         border-color: 
@@ -596,19 +604,19 @@ ol li::before {
             transparent;
     }
 
-    /* ----- Container ----- */
+    /* ---------- Container ---------- */
     .container,
     #dropdown-container {
         grid-template-columns: 3fr 1.5fr;
         margin: 0 4% auto 4%;
     }
 
-    /* ----- Info ----- */
+    /* ---------- Info ---------- */
     .artist-blurb {
         padding-top: 8em;
     }
 
-    /* ----- Artwork ----- */
+    /* ---------- Artwork ---------- */
     .main-one,
     .info {
         height: 75vh;
@@ -624,13 +632,13 @@ ol li::before {
         display: none;
     }
 
-    /* ----- Collaborators  ----- */
+    /* ---------- Collaborators ---------- */
     ol li {
         padding: none;
         font-size: 0.8em;
     }
 
-    /* ----- Colophon  ----- */
+    /* ---------- Colophon ---------- */
     .main-five p {
         font-size: 1em;;
     }
@@ -639,7 +647,7 @@ ol li::before {
         width: 100%;
     }
 
-    /* ----- Dropdown  ----- */
+    /* ---------- Dropdown ---------- */
     #readmore {
         font-size: 1em;
     }
@@ -649,12 +657,12 @@ ol li::before {
     and (max-width: 768px) 
     and (orientation: landscape) {
 
-    /* ----- Global metrics  ----- */
+    /* ---------- Global metrics ---------- */
     h1 {
         font-size: 2.5em;
     }
 
-    /* ----- Buttons  ----- */
+    /* ---------- Buttons ---------- */
     #arrow-left {
         border: 10px solid;
         border-color: 
@@ -691,12 +699,12 @@ ol li::before {
             transparent;
     }
 
-     /* ----- Header ----- */
+     /* ---------- Header ---------- */
      header {
         height: 6vh;
     }
 
-    /* ----- Colophon  ----- */
+    /* ---------- Colophon ---------- */
     .main-five {
         height: 100%;
     }
@@ -711,7 +719,7 @@ ol li::before {
     and (max-width: 1200px) 
     and (orientation: portrait) { 
 
-    /* ----- Global metrics ----- */
+    /* ---------- Global metrics ---------- */
     h1 { 
         font-size: 28px;
     }
@@ -720,7 +728,7 @@ ol li::before {
         font-size: 22px;
     }
 
-    /* ----- Header ----- */
+    /* ---------- Header ---------- */
     header {   
         padding: 2vh 2%;
         height: 2vh;
@@ -734,7 +742,7 @@ ol li::before {
         right: 4vw;
     }
 
-    /* ----- Buttons ----- */
+    /* ---------- Buttons ---------- */
     #arrow-left {
         margin-left: 14%;
     }
@@ -753,18 +761,18 @@ ol li::before {
     
     button {
         width: 50%;
-        height: 12vh;
+        height: 8vh;
         bottom: 0;
         top: unset;
     }
 
-    /* ----- Container ----- */
+    /* ---------- Container ---------- */
     .container {
         display: block;
         margin: 0 0 15% 0;
     }
 
-    /* ----- Info ----- */
+    /* ---------- Info ---------- */
     .info {
         grid-area: aside;
         display: block;
@@ -774,7 +782,7 @@ ol li::before {
     .info h3 {
         width: 100%;
         position: relative;
-        padding: 4%;
+        padding-left: 4%;
         box-sizing: border-box;
     }
 
@@ -791,7 +799,7 @@ ol li::before {
         padding-top: 2em;
     }
 
-    /* ----- Artwork ----- */
+    /* ---------- Artwork ---------- */
     
     .main-one,
     .info {
@@ -803,7 +811,7 @@ ol li::before {
         height: 100%;
     }
 
-    /* ----- Artist Name ----- */
+    /* ---------- Artist Name ---------- */
     .main-two {
        position: relative;
        padding: 4%;
@@ -819,12 +827,12 @@ ol li::before {
         padding-left: 12%;
     }
 
-    /* ----- Artist's Social ----- */
+    /* ---------- Artist's Social ---------- */
     #split-iframe {
         width: 100%;
     }
 
-    /* ----- Collaborators  ----- */
+    /* ---------- Collaborators ---------- */
 
     ol li {
         font-size: 1em;
@@ -834,7 +842,7 @@ ol li::before {
         font-size: 1.8em;
     }
 
-    /* ----- Colophon ----- */
+    /* ---------- Colophon ---------- */
     #colophon-right {
         top: 4%;
         right: 4%;
@@ -860,15 +868,40 @@ ol li::before {
         margin-top: 22%;
     }
 
-    /* ----- dropdown ----- */
+    /* ---------- dropdown ---------- */
     #dropdown-container {
         margin: 0 0 15% 0;
         grid-template-columns: auto;
-        z-index: 2;
+        z-index: 3;
+    }
+
+    #dropdown-container #dialogues-header {
+        left: 4vw;
+    }
+    
+    #dropdown-container #spring-right {
+        right: 4vw;
+    }
+
+    h2.menu-about,
+    #readmore {
+        margin-top: -1.5%;
     }
 
     #readmore {
         font-size: 1em;
+    }
+
+    #dropdown-container .main-four {
+        height: 90vh;
+    }
+
+    .dropdown-main-five {
+        height: 3vh;
+    }
+
+    .dropdown-about {
+        margin-top: 0.5%;
     }
 }
 
@@ -876,13 +909,18 @@ ol li::before {
 and (max-width: 736px) 
 and (orientation: portrait) { 
 
-    /* ----- Header ----- */
+    /* ---------- Header ---------- */
     header {   
         height: 3vh;
         padding: 2vh 0;
     }
 
-    /* ----- Container ----- */
+    button {
+        height: 12vh;
+        z-index: 1;
+    }
+
+    /* ---------- Container ---------- */
     #artwork-container {
         /* display: block; */
         display: none;
@@ -895,7 +933,7 @@ and (orientation: portrait) {
         z-index: 3;
     }
 
-    /* ----- Artwork Fullscreen ----- */
+    /* ---------- Artwork Fullscreen ---------- */
     #artwork {
         position: relative;
     }
@@ -926,7 +964,7 @@ and (orientation: portrait) {
         position: absolute;
     }
 
-    /* ----- Buttons Fullscreen ----- */
+    /* ---------- Buttons Fullscreen ---------- */
     .button-fullscreen {
         width: 100vw;
         height: 6vh;
@@ -979,7 +1017,7 @@ and (orientation: portrait) {
         top: 0;
     }
 
-    /* ----- Collaborators  ----- */
+    /* ---------- Collaborators ---------- */
     .column-container {
         /* display: block; */
         grid-template-columns: auto auto;
@@ -994,7 +1032,7 @@ and (orientation: portrait) {
         font-size: 1.8em;
     }
 
-    /* ----- Colophon ----- */
+    /* ---------- Colophon ---------- */
     #colophon-right {
         top: 4%;
         right: 4%;
@@ -1021,7 +1059,11 @@ and (orientation: portrait) {
         margin-top: 22%;
     }
 
-    /* ----- Colophon ----- */
+    /* ---------- dropdown ---------- */
+    #dropdown-container {
+        margin: 0 0 20% 0;
+    }
+
     .menu-about {
         font-size: 1.3em;
         text-align: left;
@@ -1031,15 +1073,15 @@ and (orientation: portrait) {
 
     #readmore {
         font-size: 1em;
-        margin-top: 6%;
+        margin-top: 4.5%;
+    }
+
+    #dropdown-container .main-four {
+        height: 100%;
     }
 
     .dropdown-main-five {
         padding: 4%;
-    }
-
-    /* ----- dropdown ----- */
-    #dropdown-container {
-    margin: 0 0 20% 0;
+        height: auto;
     }
 }

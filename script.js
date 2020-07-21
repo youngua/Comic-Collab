@@ -1,13 +1,33 @@
+var mobileT = [
+    window.matchMedia("(max-width: 2000px)"),
+    window.matchMedia("(orientation: landscape)"),
+
+    window.matchMedia("(max-width: 1200px)"),
+    window.matchMedia("(orientation: portrait)"),
+
+    window.matchMedia("(max-width: 736px)")
+]
+
 /* 
  * Toggles the menu.
  */
 function toggleMenu() {
     var x = document.getElementById("dropdown-container");
 
-    if (x.style.display === "none") {
-        x.style.display = "grid";
-    } else {
-        x.style.display = "none";
+    if (mobileT[0].matches && mobileT[1].matches || mobileT[4].matches) {
+        if (x.style.display === "none") {
+            x.style.display = "grid";
+        } else {
+            x.style.display = "none";
+        }
+    }
+
+    if (mobileT[2].matches && mobileT[3].matches && !(mobileT[4].matches)) {
+        if (x.style.display === "none") {
+            x.style.display = "inline-block";
+        } else {
+            x.style.display = "none";
+        }
     }
 }
 
@@ -41,6 +61,7 @@ var mobile = [
     window.matchMedia("(max-height: 414px)"),
 
     window.matchMedia("(max-width: 2000px)"),
+    window.matchMedia("(max-width: 420px)")
 ]
 
 /*
@@ -52,6 +73,47 @@ $(window).scroll(function () {
 
     if ($(window).scrollTop() > elementPosition.top) {
         if (mobile[3].matches) {
+
+            $('header').css({
+                'position': 'fixed',
+                'left': '0',
+                'right': '0',
+                'width': '100vw',
+            });
+
+            $('#dialogues-header').css({
+                'position': 'fixed',
+            });
+
+            $('#spring-right').css({
+                'position': 'fixed',
+            });
+
+        }
+    } else {
+
+        $('header').css({
+            'position': 'static',
+            'width': 'auto',
+        });
+
+        $('#dialogues-header').css({
+            'position': 'fixed',
+        });
+
+        $('#spring-right').css({
+            'position': 'fixed',
+        });
+    }
+});
+
+/*
+ * fixed the header when user scroll
+ */
+$('#dropdown-container').scroll(function () {
+
+    if ($('#dropdown-container').scrollTop() > elementPosition.top) {
+        if (mobile[4].matches) {
 
             $('header').css({
                 'position': 'fixed',
@@ -107,8 +169,8 @@ function orientationChange() {
  */
 
 /*
-* Locks the orientation when in Fullscreen mode
-*/
+ * Locks the orientation when in Fullscreen mode
+ */
 
 
 
