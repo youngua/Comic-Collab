@@ -1061,7 +1061,8 @@ and (orientation: portrait) {
 
     /* ---------- dropdown ---------- */
     #dropdown-container {
-        margin: 0 0 20% 0;
+        bottom: 10%;
+        height: 90vh;
     }
 
     .menu-about {
