@@ -1,4 +1,7 @@
-var mobileT = [
+/*
+ * Defines the media queries
+ */
+var mobile = [
     window.matchMedia("(max-width: 2000px)"),
     window.matchMedia("(orientation: landscape)"),
 
@@ -9,60 +12,45 @@ var mobileT = [
 ]
 
 /* 
- * Toggles the menu.
+ * Toggles the menu
  */
 function toggleMenu() {
     var x = document.getElementById("dropdown-container");
 
-    if (mobileT[0].matches && mobileT[1].matches || mobileT[4].matches) {
+    if (mobile[0].matches && mobile[1].matches || mobile[4].matches) {
         if (x.style.display === "none") {
             x.style.display = "grid";
+
+            // disables body from scrolling when menu open
+            document.documentElement.style.overflow = 'hidden';
+            document.body.scroll = "no";
+
         } else {
             x.style.display = "none";
+
+            // enable scrolling when menu close
+            document.documentElement.style.overflow = 'scroll';
+            document.body.scroll = "yes";
         }
     }
 
-    if (mobileT[2].matches && mobileT[3].matches && !(mobileT[4].matches)) {
+    if (mobile[2].matches && mobile[3].matches && !(mobile[4].matches)) {
         if (x.style.display === "none") {
             x.style.display = "inline-block";
+
+            // disables body from scrolling when menu open
+            document.documentElement.style.overflow = 'hidden';
+            document.body.scroll = "no";
+
         } else {
             x.style.display = "none";
+
+            // enable scrolling when menu close
+            document.documentElement.style.overflow = 'scroll';
+            document.body.scroll = "yes";
         }
     }
 }
-
-/*
- * Defines what should happen for small screens
- */
-$(document).ready(function () {
-
-    // triggers the menu dropdown
-    if (mobile[0].matches || mobile[1].matches && !(mobile[2].matches)) {
-
-        $(".toggle").hide();
-        $(".mobile-nav").click(function () {
-            $(".toggle").toggleClass("x");
-
-            $(".toggle").animate({ height: "toggle" });
-        });
-
-    } else {
-        $(".toggle").show();
-
-    }
-});
-
-/*
- * Defines the media queries for small screens
- */
-var mobile = [
-    window.matchMedia("(min-height: 1084px)"),
-    window.matchMedia("(max-width: 768px)"),
-    window.matchMedia("(max-height: 414px)"),
-
-    window.matchMedia("(max-width: 2000px)"),
-    window.matchMedia("(max-width: 420px)")
-]
 
 /*
  * fixed the header when user scroll
@@ -72,7 +60,7 @@ var elementPosition = $('header').offset();
 $(window).scroll(function () {
 
     if ($(window).scrollTop() > elementPosition.top) {
-        if (mobile[3].matches) {
+        if (mobile[0].matches) {
 
             $('header').css({
                 'position': 'fixed',
@@ -113,7 +101,7 @@ $(window).scroll(function () {
 $('#dropdown-container').scroll(function () {
 
     if ($('#dropdown-container').scrollTop() > elementPosition.top) {
-        if (mobile[4].matches) {
+        if (mobile[4].matches && mobile[3].matches) {
 
             $('header').css({
                 'position': 'fixed',
@@ -165,10 +153,6 @@ function orientationChange() {
 }
 
 /*
- * Disable page scroll when scrolling a div
- */
-
-/*
  * Locks the orientation when in Fullscreen mode
  */
 
@@ -182,7 +166,16 @@ function openFullscreen() {
 
     if (x.style.display === "none") {
         x.style.display = "block";
+
+        // disables body from scrolling when menu open
+        document.documentElement.style.overflow = 'hidden';
+        document.body.scroll = "no";
+
     } else {
         x.style.display = "none";
+
+        // enable scrolling when menu close
+        document.documentElement.style.overflow = 'scroll';
+        document.body.scroll = "yes";
     }
 }
