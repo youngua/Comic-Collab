@@ -23,14 +23,14 @@ function toggleMenu() {
 
             // disables body from scrolling when menu open
             document.documentElement.style.overflow = 'hidden';
-            document.body.scroll = "no";
+            // document.body.scroll = "no";
 
         } else {
             x.style.display = "none";
 
             // enable scrolling when menu close
             document.documentElement.style.overflow = 'scroll';
-            document.body.scroll = "yes";
+            // document.body.scroll = "yes";
         }
     }
 
@@ -169,15 +169,13 @@ function openFullscreen() {
 
         // disables body from scrolling when menu open
         document.documentElement.style.overflow = 'hidden';
-        document.documentElement.style.height = '100%';
-        // document.body.scroll = "no";
+        document.body.scroll = "no";
 
     } else {
         x.style.display = "none";
 
         // enable scrolling when menu close
         document.documentElement.style.overflow = 'scroll';
-        document.documentElement.style.height = 'auto';
-        // document.body.scroll = "yes";
+        document.body.scroll = "yes";
     }
 }
