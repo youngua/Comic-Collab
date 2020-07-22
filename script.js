@@ -116,7 +116,7 @@ $(window).scroll(function () {
 });
 
 /*
- * fixed the header when user scroll
+ * fixed the header when user scroll / for mobile screen sizes
  */
 $('#dropdown-container').scroll(function () {
 
