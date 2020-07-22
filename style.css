@@ -925,6 +925,10 @@ and (orientation: portrait) {
     }
 
     /* ---------- Container ---------- */
+      .container {
+        margin: 0 0 15% 0;
+    }
+
     #artwork-container {
         /* display: block; */
         display: none;
