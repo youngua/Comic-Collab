@@ -12,7 +12,7 @@ var mobile = [
 ]
 
 /* 
- * Toggles the menu
+ * Toggles the header menu
  */
 function toggleMenu() {
     var x = document.getElementById("dropdown-container");
@@ -23,14 +23,14 @@ function toggleMenu() {
 
             // disables body from scrolling when menu open
             document.documentElement.style.overflow = 'hidden';
-            // document.body.scroll = "no";
+            document.body.scroll = "no";
 
         } else {
             x.style.display = "none";
 
             // enable scrolling when menu close
             document.documentElement.style.overflow = 'scroll';
-            // document.body.scroll = "yes";
+            document.body.scroll = "yes";
         }
     }
 
