@@ -173,19 +173,19 @@ function orientationChange() {
 }
 
 /*
- * Locks the orientation when in Fullscreen mode
- */
-
-
-
-/*
  * Fullscreen the artworks
  */
 function openFullscreen() {
     var x = document.getElementById("artwork-container");
+    var y = document.getElementById("view-instructions");
 
     if (x.style.display === "none") {
+
         x.style.display = "block";
+
+        if (y.style.display === "block") {
+            y.style.display = "none";
+        }
 
         // disables body from scrolling when menu open
         document.documentElement.style.overflow = 'hidden';
@@ -198,4 +198,26 @@ function openFullscreen() {
         document.documentElement.style.overflow = 'scroll';
         document.body.scroll = "yes";
     }
+}
+
+function openViewInstruction() {
+    var x = document.getElementById("view-instructions");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+}
+
+function exitViewInstructions() {
+    var x = document.getElementById("view-instructions");
+
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "none";
+    }
+
 }
