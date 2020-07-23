@@ -1034,7 +1034,7 @@ and (orientation: portrait) {
 
     #fullscreen {
         position: absolute;
-        top: 42vh;
+        top: 75vw;
         display: block;
     }
 
