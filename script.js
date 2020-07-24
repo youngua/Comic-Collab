@@ -156,7 +156,6 @@ $('#dropdown-container').scroll(function () {
     }
 });
 
-
 /*
  * Reloads webpage when mobile orientation changes
  */
@@ -219,5 +218,20 @@ function exitViewInstructions() {
     } else {
         x.style.display = "none";
     }
-
 }
+
+
+var x = document.getElementById('display-right-fullscreen');
+
+if (x.clicked == true) {
+    alert('true');
+    $('#artwork-container').load("/artists/artist-1.html" + '#artwork-container');
+}
+
+
+// $(function () {
+//     $("#display-right-fullscreen").on("click", function () {
+//         $("#artwork-container").load("/artists/artist-1.html");
+//         console.log('here');
+//     });
+// });
