@@ -28,7 +28,28 @@
 
         <main class="main-one">
             <img class="artwork" src="../img/team1-blue-yellow/7-clearminji.jpg" loading="eager"/>
-            <img id="fullscreen" src="../img/fullscreen-white-24dp.svg" onclick="openFullscreen()"/>
+            <img id="fullscreen" src="../img/fullscreen-white-24dp.svg" onclick="openViewInstruction()"/>
+
+            <!-- viewing instructions -->
+            <div id="view-instructions">
+            <span class="view-title">For best viewing experience</span>
+            <ol>
+                <li>Tap the AA and select 
+                    <span id="hidetoolbar">"Hide Toolbar"</span>
+                </li>
+                <li>Lock your phone orientation</li>
+                <li>When you are ready, enter!</li>
+            </ol>
+
+            <img id="arrow-white-up" src="img/arrow-white-up.png" />
+
+            <img id="arrow-white-down" src="img/arrow-white-down.png" />
+
+            <div id="close" onclick="exitViewInstructions()"></div>
+
+            <img id="openfullscreen" src="img/fullscreen-white-24dp.svg" onclick="openFullscreen()"/>
+        </div>
+            
         </main>
       
         <aside class="info">
