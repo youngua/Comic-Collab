@@ -31,7 +31,7 @@
 
         <main class="main-one">
             <img class="artwork" src="../img/team1-blue-yellow/1-elisha.jpg " loading="eager"/>
-            <img id="fullscreen" src="../img/fullscreen-white-24dp.svg" onclick="openViewInstruction()"/>
+            <!-- <img id="fullscreen" src="../img/fullscreen-white-24dp.svg" onclick="openViewInstruction()"/> -->
 
             <!-- viewing instructions -->
             <div id="view-instructions">
@@ -81,11 +81,19 @@
 
 <!-- Artwork Full screen Mode-->
     <div id="artwork-container">
-        <a name="artist-1"></a>
+        <a name="block=true"></a>
 
-        <a href="../index.html#index"><div class="button-fullscreen" id="display-left-black-fullscreen"><div id="arrow-left-white-fullscreen"></div></div></a>
+        <a href="../index.html#index">
+            <div class="button-fullscreen display-left-black-fullscreen" >
+                <div id="arrow-left-white-fullscreen"></div>
+            </div>
+        </a>
         
-        <a href="artist-7.html#artist-7"><div class="button-fullscreen" id="display-right-black-fullscreen"><div id="arrow-right-white-fullscreen"></div></div></a>
+        <a href="artist-7.html#artist-7">
+            <div class="button-fullscreen display-right-black-fullscreen">
+                <div id="arrow-right-white-fullscreen"></div>
+            </div>
+        </a>
 
         <img id="artwork-fullscreen" src="../img/team1-blue-yellow/1-elisha.jpg" />
         <img id="fullscreen-exit" onclick="openFullscreen()"src="../img/fullscreen_exit-white-24dp.svg">
@@ -174,7 +182,6 @@
             <h2 class="dropdown-about">We will be back next year with something different!</h2>
         </main>
     </div>
-
 <script src="../script.js" type="text/javascript"></script>
 </body>
 </html>

@@ -34,7 +34,7 @@ Last Updated: July 18, 2020
             
             <main class="main-one">
                 <img class="artwork" src="img/team1-blue-yellow/14-corinne.jpg" loading="eager"/>
-                <img id="fullscreen" src="img/fullscreen-white-24dp.svg" onclick="openViewInstruction()"/>
+                <!-- <img id="fullscreen" src="img/fullscreen-white-24dp.svg" onclick="openViewInstruction()"/> -->
 
             <!-- viewing instructions -->
             <div id="view-instructions">
@@ -177,9 +177,17 @@ Last Updated: July 18, 2020
     <div id="artwork-container">
         <a name="index"></a>
         
-        <a href="artists/artist-35.html"><div class="button-fullscreen" id="display-left-fullscreen"><div id="arrow-left-fullscreen"></div></div></a>
+        <a href="artists/artist-35.html#artist-35" >
+            <div class="button-fullscreen display-left-fullscreen">
+                <div id="arrow-left-fullscreen"></div>
+            </div>
+        </a>
 
-        <a href="artists/artist-1.html#artist-1"><div class="button-fullscreen" id="display-right-fullscreen"><div id="arrow-right-fullscreen"></div></div></a>
+        <a href="artists/artist-1.html#block=true" >
+            <div class="button-fullscreen display-right-fullscreen">
+                <div id="arrow-right-fullscreen"></div>
+            </div>
+        </a>
 
         <img id="artwork-fullscreen" src="img/team1-blue-yellow/14-corinne.jpg" />
         <img id="fullscreen-exit" onclick="openFullscreen()" src="img/fullscreen_exit-white-24dp.svg">
@@ -270,7 +278,6 @@ Last Updated: July 18, 2020
         </main>
         
     </div>
-
 <script src="script.js" type="text/javascript"></script>
 </body>
 </html>

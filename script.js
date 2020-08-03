@@ -172,6 +172,34 @@ function orientationChange() {
 }
 
 /*
+ * Open the view instructions
+ */
+function openViewInstruction() {
+    var x = document.getElementById("view-instructions");
+
+    if (x.style.display === "none") {
+        x.style.display = "block";
+
+    } else {
+        x.style.display = "none";
+    }
+}
+
+/*
+ * Exit the view instructions
+ */
+function exitViewInstructions() {
+    var x = document.getElementById("view-instructions");
+
+    if (x.style.display === "block") {
+        x.style.display = "none";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+
+/*
  * Fullscreen the artworks
  */
 function openFullscreen() {
@@ -181,10 +209,7 @@ function openFullscreen() {
     if (x.style.display === "none") {
 
         x.style.display = "block";
-
-        if (y.style.display === "block") {
-            y.style.display = "none";
-        }
+        y.style.display = "none";
 
         // disables body from scrolling when menu open
         document.documentElement.style.overflow = 'hidden';
@@ -199,39 +224,3 @@ function openFullscreen() {
     }
 }
 
-function openViewInstruction() {
-    var x = document.getElementById("view-instructions");
-
-    if (x.style.display === "none") {
-        x.style.display = "block";
-
-    } else {
-        x.style.display = "none";
-    }
-}
-
-function exitViewInstructions() {
-    var x = document.getElementById("view-instructions");
-
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "none";
-    }
-}
-
-
-var x = document.getElementById('display-right-fullscreen');
-
-if (x.clicked == true) {
-    alert('true');
-    $('#artwork-container').load("/artists/artist-1.html" + '#artwork-container');
-}
-
-
-// $(function () {
-//     $("#display-right-fullscreen").on("click", function () {
-//         $("#artwork-container").load("/artists/artist-1.html");
-//         console.log('here');
-//     });
-// });
