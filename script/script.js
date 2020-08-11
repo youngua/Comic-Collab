@@ -198,7 +198,6 @@ function exitViewInstructions() {
     }
 }
 
-
 /*
  * Fullscreen the artworks
  */
@@ -223,4 +222,3 @@ function openFullscreen() {
         document.body.scroll = "yes";
     }
 }
-
