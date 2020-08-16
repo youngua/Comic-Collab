@@ -14,29 +14,15 @@ var mobile = [
 /* 
  * Toggles the header menu
  */
-function toggleMenu() {
+function toggleMenu(e) {
     var x = document.getElementById("dropdown-container");
 
-    if (mobile[0].matches && mobile[1].matches || mobile[4].matches) {
-        if (x.style.display === "none") {
+    if (mobile[0].matches && mobile[1].matches || mobile[3].matches) {
+
+        if (!(x.style.display == "grid")) {
             x.style.display = "grid";
 
-            // disables body from scrolling when menu open
-            document.documentElement.style.overflow = 'hidden';
-            document.body.scroll = "no";
-
-        } else {
-            x.style.display = "none";
-
-            // enable scrolling when menu close
-            document.documentElement.style.overflow = 'scroll';
-            document.body.scroll = "yes";
-        }
-    }
-
-    if (mobile[2].matches && mobile[3].matches && !(mobile[4].matches)) {
-        if (x.style.display === "none") {
-            x.style.display = "inline-block";
+            console.log('click 1');
 
             // disables body from scrolling when menu open
             document.documentElement.style.overflow = 'hidden';
@@ -45,12 +31,18 @@ function toggleMenu() {
         } else {
             x.style.display = "none";
 
+            console.log('click 2');
+
             // enable scrolling when menu close
             document.documentElement.style.overflow = 'scroll';
             document.body.scroll = "yes";
         }
+
+    } else {
+        x.style.display = "none";
     }
 }
+
 
 /*
  * Toggles the header dropdown for info session
@@ -168,57 +160,5 @@ function orientationChange() {
         window.addEventListener("orientationchange", function () {
             location.reload();
         });
-    }
-}
-
-/*
- * Open the view instructions
- */
-function openViewInstruction() {
-    var x = document.getElementById("view-instructions");
-
-    if (x.style.display === "none") {
-        x.style.display = "block";
-
-    } else {
-        x.style.display = "none";
-    }
-}
-
-/*
- * Exit the view instructions
- */
-function exitViewInstructions() {
-    var x = document.getElementById("view-instructions");
-
-    if (x.style.display === "block") {
-        x.style.display = "none";
-    } else {
-        x.style.display = "none";
-    }
-}
-
-/*
- * Fullscreen the artworks
- */
-function openFullscreen() {
-    var x = document.getElementById("artwork-container");
-    var y = document.getElementById("view-instructions");
-
-    if (x.style.display === "none") {
-
-        x.style.display = "block";
-        y.style.display = "none";
-
-        // disables body from scrolling when menu open
-        document.documentElement.style.overflow = 'hidden';
-        document.body.scroll = "no";
-
-    } else {
-        x.style.display = "none";
-
-        // enable scrolling when menu close
-        document.documentElement.style.overflow = 'scroll';
-        document.body.scroll = "yes";
     }
 }

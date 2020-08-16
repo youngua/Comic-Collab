@@ -26,12 +26,20 @@ p {
     padding-bottom: 1.5em;
 }
 
+p:nth-last-child(1) {
+    padding-bottom: 0;
+}
+
 h1 { 
     font-weight: 400;
-    font-size: 4.4em;
+    font-size: 4em;
     display: block;
     float: left;
     text-transform: uppercase;
+    color: #fff;
+}
+
+h1 a:hover {
     color: #fff;
 }
 
@@ -220,7 +228,8 @@ button,
 header {
     grid-area: header;
     background-color: #F4F4F4;
-    padding-top: 0.8%;
+    padding-top: 0.5%;
+    padding-bottom: 0.3%;
     cursor: pointer;
     width: 100vw;
     z-index: 2;
@@ -323,6 +332,7 @@ header {
     box-sizing: border-box;
     padding-top: 12em;
     overflow: scroll;
+    margin-bottom: 2em;
 }
 
 /* ---------- Artwork ---------- */
@@ -362,7 +372,7 @@ header {
 .main-two {
     grid-area: main-two;
     background-color: #000;
-    padding: 12px 2% 12px 2%;
+    padding: 4px 2% 4px 2%;
     text-align: right;
     z-index: 1;
 }
@@ -434,8 +444,8 @@ ol {
 
 ol li {
     counter-increment: my-awesome-counter;
-    padding: 1.4%;
-    font-size: 1.5em;
+    padding: 0.6%;
+    font-size: 1em;
 }
 
 ol li::before {
@@ -468,10 +478,6 @@ ol li::before {
     color: #fff;
 }
 
-.main-five h2 {
-    padding-bottom: 1.2em;
-}
-
 .main-five p {
     font-size: 1.2em;;
     line-height: 0.8em;
@@ -484,8 +490,14 @@ ol li::before {
 }
 
 .item h2 {
+    font-weight: 500;
     padding-top: 8%;
     float: none;
+    padding-bottom: 1.2em;
+}
+
+.item p {
+    font-weight: 300;
 }
 
 #typefaces-container {
@@ -537,13 +549,14 @@ ol li::before {
 .dropdown-main-five {
     grid-area: main-five;
     background-color: #E5E5E5;
-    padding: 2%;
+    padding: 1% 2% 1% 2%;
     position: relative;
 }
 
 .grey {
     background-color: #E5E5E5;
-    padding: 2%;
+    padding-top: 1%;
+    padding-bottom: 1%;
     margin-bottom: 1px;
 }
 
@@ -551,11 +564,6 @@ ol li::before {
     padding: 0;
     font-size: 1.5em;
     float: right;
-    border-bottom: 1px #000 solid;
     line-height: 1em;
     margin-top: 0.5%;
-}
-
-#readmore:hover {
-    border-bottom: 1px #FF83EC solid;
 }
