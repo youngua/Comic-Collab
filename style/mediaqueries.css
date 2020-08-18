@@ -329,6 +329,7 @@
         margin: 0 0 10% 0;
         grid-template-columns: auto;
         z-index: 2;
+        height: auto;
     }
 
     #dropdown-container .main-two {
@@ -348,9 +349,9 @@
         margin-top: 1%;
     }
 
-    #dropdown-container .main-four {
-        height: 100vh;
-    }
+    /* #dropdown-container .main-four {
+        height: auto;
+    } */
 
     .dropdown-main-five {
         height: 3vh;
@@ -384,29 +385,6 @@ and (orientation: portrait) {
     /* ---------- Container ---------- */
     .container {
         margin: 0 0 15% 0;
-    }
-
-    #artwork-container {
-        /* display: block; */
-        display: none;
-        background-color: rgb(34, 34, 34);
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 4;
-    }
-
-    .artwork-container {
-        display: block;
-        background-color: rgb(34, 34, 34);
-        position: fixed;
-        top: 0;
-        right: 0;
-        left: 0;
-        bottom: 0;
-        z-index: 4;
     }
 
     /* ---------- Info ---------- */
@@ -476,101 +454,6 @@ and (orientation: portrait) {
         background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 53%,transparent 53%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 53%,transparent 53%, transparent 100%);
     }
 
-    /* ---------- Artwork Fullscreen ---------- */
-    #artwork {
-        position: relative;
-    }
-
-    #artwork-fullscreen {
-        max-width: 140vw;
-        max-height: 100vh;
-        transform: translatex(calc(50vw - 50%)) translatey(calc(50vh - 50%)) rotate(270deg);
-        object-fit: contain;
-        position: relative;
-    }
-
-    #fullscreen {
-        position: absolute;
-        top: 75vw;
-        display: block;
-    }
-
-    #openfullscreen {
-        position: absolute;
-        top: 61vw;
-        display: block;
-    }
-
-    #openfullscreen {
-        z-index: 1;
-    }
-
-    #fullscreen, 
-    #fullscreen-exit,
-    #openfullscreen {
-        right: 3%;
-        background-color: rgba(255, 255, 255, 0.4);
-        border-radius: 10px;
-    }
-
-    #fullscreen-exit {
-        top: 34vw;
-        position: absolute;
-    }
-
-    /* ---------- Buttons Fullscreen ---------- */
-    .button-fullscreen {
-        width: 100vw;
-        height: 6vh;
-        top: unset;
-    }
-
-    #arrow-left-fullscreen,
-    #arrow-left-white-fullscreen {
-        -webkit-transform: rotate(135deg);
-        transform: rotate(135deg);
-        margin: 0 auto;
-        margin-top: -0.8vh;
-    }
-
-    #arrow-right-fullscreen,
-    #arrow-right-white-fullscreen {
-        -webkit-transform: rotate(315deg);
-        transform: rotate(315deg);
-        margin: 0 auto;
-        margin-top: 2.5vh;
-    }
-
-    #arrow-left-fullscreen,
-    #arrow-right-fullscreen {
-        border: 14px solid;
-        border-color: 
-            #000
-            #000
-            transparent
-            transparent;
-    }
-
-    #arrow-left-white-fullscreen,
-    #arrow-right-white-fullscreen {
-        border: 14px solid;
-        border-color: 
-            #fff
-            #fff
-            transparent
-            transparent;
-    }
-
-    .display-left-fullscreen,
-    .display-left-black-fullscreen {
-        bottom: 0;
-    }
-
-    .display-right-fullscreen,
-    .display-right-black-fullscreen {
-        top: 0;
-    }
-
     /* ---------- Collaborators ---------- */
     .column-container {
         /* display: block; */
@@ -615,7 +498,8 @@ and (orientation: portrait) {
 
     /* ---------- dropdown ---------- */
     #dropdown-container {
-        height: 85vh;
+        height: 100vh;
+        z-index: 4;
     }
 
     .menu-about {
