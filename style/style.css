@@ -354,15 +354,6 @@ header {
     height: 100%;
     background-size: cover;
 }
-
-#artwork-container {
-    display: none;
-}
-
-#fullscreen {
-    display: none;
-}
-
 /* ---------- Viewing instructions ---------- */
 #view-instructions {
     display: none;     
