@@ -107,13 +107,14 @@ $(window).scroll(function () {
     }
 });
 
+
 /*
  * fixed the header when user scroll / for mobile screen sizes
  */
 $('#dropdown-container').scroll(function () {
 
     if ($('#dropdown-container').scrollTop() > elementPosition.top) {
-        if (mobile[4].matches && mobile[3].matches) {
+        if (mobile[4].matches || mobile[3].matches) {
 
             $('header').css({
                 'position': 'fixed',
@@ -129,7 +130,6 @@ $('#dropdown-container').scroll(function () {
             $('#spring-right').css({
                 'position': 'fixed',
             });
-
         }
     } else {
 
