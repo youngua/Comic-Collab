@@ -225,14 +225,14 @@ header,
 .dropdown-main-five,
 button, 
 .button-fullscreen {
-    outline: 1.25px #000 solid;
+    outline: 1.75px #000 solid;
 }
 
 header {
     grid-area: header;
     background-color: #F4F4F4;
     padding-top: 1%;
-    padding-bottom: 1%;
+    padding-bottom: 1.2%;
     cursor: pointer;
     width: 100vw;
     z-index: 2;
