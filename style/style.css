@@ -225,7 +225,8 @@ header,
 .dropdown-main-five,
 button, 
 .button-fullscreen {
-    outline: 2px #000 solid;
+    /* outline: 2px #000 solid; */
+    outline: 0.15rem #000 solid;
 }
 
 header {
