@@ -423,7 +423,7 @@ iframe {
     display: grid;
     grid-template-rows: repeat(20, auto);
     grid-auto-flow: column; 
-    grid-column-gap: 20%;
+    grid-column-gap: 25%;
     justify-content: center;
 }
 

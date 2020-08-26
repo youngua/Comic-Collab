@@ -88,6 +88,10 @@
         font-size: 0.9em;
     }
 
+    .column-container {
+        grid-column-gap: 20%;
+    }
+
     /* ---------- Colophon ---------- */
     .main-five p {
         font-size: 1em;;
