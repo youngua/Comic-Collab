@@ -83,13 +83,19 @@
     }
 
     /* ---------- Collaborators ---------- */
+    .column-container {
+        grid-column-gap: 10%;
+    }
+
     ol li {
         padding: none;
         font-size: 0.9em;
+        padding-bottom: 0.2em;
+        width: 100%;
     }
 
-    .column-container {
-        grid-column-gap: 20%;
+    ol li::before {
+        font-size: 1.5em;
     }
 
     /* ---------- Colophon ---------- */
@@ -160,6 +166,21 @@
      /* ---------- Header ---------- */
      header {
         height: 7vh;
+    }
+
+    /* ---------- Collaborators ---------- */
+    .column-container {
+        grid-column-gap: 10%;
+    }
+
+    ol li {
+        padding: none;
+        font-size: 0.7em;
+        width: 110%;
+    }
+
+    ol li::before {
+        font-size: 1.4em;
     }
 
     /* ---------- Colophon ---------- */

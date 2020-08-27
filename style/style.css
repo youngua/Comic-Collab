@@ -74,14 +74,6 @@ a {
 }
 
 .link:hover {
-    /* text-align: center;
-    
-    color: #FFF231;
-	background-image: -webkit-linear-gradient(92deg, #FFF231, #FF83EC);
-	-webkit-background-clip: text;
-	-webkit-text-fill-color: transparent;
-    -webkit-animation: hue 2s infinite linear; */
-
     border-bottom: 1px black solid;
 }
 
@@ -178,21 +170,11 @@ button,
     background-color: #FF83EC;
 }
 
-/* #display-left:hover,
-.display-left-fullscreen:hover {
-    background-color: #5B356F;
-} */
-
 #display-right,
 .display-right-fullscreen {
     right: 0;
     background-color: #FFF231;
 }
-
-/* #display-right:hover,
-.display-right-fullscreen:hover {
-    background-color: #3957CB;
-} */
 
 .display-left-black,
 .display-left-black-fullscreen {
@@ -205,14 +187,6 @@ button,
     right: 0;
     background-color: #000;
 }
-
-/* #hover-blue:hover {
-    background-color: #3957CB;
-}
-
-#hover-purple:hover {
-    background-color: #5B356F;
-} */
 
 /* ---------- Header ---------- */
 header, 
@@ -359,10 +333,6 @@ header {
     height: 100%;
     background-size: cover;
 }
-/* ---------- Viewing instructions ---------- */
-#view-instructions {
-    display: none;     
-}
 
 /* ---------- Artist Name ---------- */
 .main-two {
@@ -416,14 +386,14 @@ iframe {
     grid-area: main-four;
     height: 100%;
     background-color: #F4F4F4;
+    padding: 2%;
 }
 
 .column-container {
-    padding: 4%;
     display: grid;
     grid-template-rows: repeat(20, auto);
     grid-auto-flow: column; 
-    grid-column-gap: 25%;
+    grid-column-gap: 20%;
     justify-content: center;
 }
 
@@ -434,9 +404,8 @@ ol {
 
 ol li {
     counter-increment: my-awesome-counter;
-    padding: 0.2%;
-    font-size: 1.2em;
-    width: 140%;
+    font-size: 1.1em;
+    width: 125%;
 }
 
 ol li::before {
@@ -470,7 +439,7 @@ ol li::before {
 }
 
 .main-five p {
-    font-size: 1.2em;;
+    font-size: 1.2em;
     line-height: 0.8em;
     padding-bottom: 1em;
     text-indent: 8%;
