@@ -319,9 +319,13 @@
     }
 
     /* ---------- Collaborators ---------- */
+    .column-container {
+        grid-column-gap: 12%;
+    }
 
     ol li {
-        font-size: 0.8em;
+        font-size: 14px;
+        width: 100%;
     }
 
     ol li::before {
@@ -422,76 +426,20 @@ and (orientation: portrait) {
         z-index: 2;
     }
 
-    /* ---------- Viewing instructions ---------- */
-    #view-instructions {
-        /* display: block; */
-        display: none;
-        position: absolute;
-        background-color: hsla(0, 0%, 0%, 0.85);
-        right: 0;
-        left: 0;
-        height: 35vh;
-        text-align: center;
-        padding: 6%;
-    }
-
-    .view-title {
-        font-size: 18px;
-        font-weight: 700;
-    }
-
-    #view-instructions li,
-    .view-title {
-        color: white;
-        text-align: left;
-    }
-
-    #view-instructions li {
-        font-size: 16px;
-        padding-left: 8%;
-        padding-top: 4%;
-    }
-
-    #hidetoolbar {
-        display: flex;
-        margin-left: 9%;
-    }
-
-    #arrow-white-up {
-        position: absolute;
-        top: 3%;
-        left: 2%;
-        height: 30%;
-    }
-
-    #arrow-white-down {
-        position: absolute;
-        right: 4%;
-        bottom: 25%;
-        width: 20%;
-    }
-
-    #close {
-        position: absolute;
-        top: 4%;
-        right: 4%;
-        color: #fff;
-        display: block;
-        width: 20px;
-        height: 20px;
-        border-radius: 100%;
-        background: -webkit-linear-gradient(-45deg, transparent 0%, transparent 46%, white 46%,  white 53%,transparent 53%, transparent 100%), -webkit-linear-gradient(45deg, transparent 0%, transparent 46%, white 46%,  white 53%,transparent 53%, transparent 100%);
-    }
-
     /* ---------- Collaborators ---------- */
+    .main-four {
+        padding: 4%;
+    }
+
     .column-container {
         /* display: block; */
         grid-template-columns: auto auto;
         grid-template-rows: repeat(58, auto);
+        justify-content: left;
     }
 
     ol li {
-        font-size: 1em;
+        font-size: 14px;
     }
 
     ol li::before {
@@ -539,7 +487,7 @@ and (orientation: portrait) {
     }
 
     #readmore {
-        font-size: 1em;
+        font-size: 16px;
         margin-top: 4.5%;
     }
 
