@@ -40,8 +40,10 @@ h1 {
 }
 
 h1 a:hover {
-    border-bottom: 2px #000 solid;
-    padding-bottom: -5px;
+    /* border-bottom: 2px #000 solid; */
+    text-decoration: underline;
+    text-decoration-color: #000;
+    text-underline-offset: 8px;
 }
 
 h2 {
@@ -74,7 +76,7 @@ a {
 }
 
 .link:hover {
-    border-bottom: 1px black solid;
+    border-bottom: 2px #000 solid;
 }
 
 @-webkit-keyframes hue {
@@ -199,8 +201,7 @@ header,
 .dropdown-main-five,
 button, 
 .button-fullscreen {
-    /* outline: 2px #000 solid; */
-    outline: 0.18rem #000 solid;
+    outline: 0.12rem #000 solid;
 }
 
 header {
@@ -212,6 +213,10 @@ header {
     width: 100vw;
     z-index: 2;
     height: 4vh;
+}
+
+header:hover {
+    text-decoration: underline;
 }
 
 .pink-header {
@@ -233,7 +238,7 @@ header {
 }
 
 #dialogues-header:hover {
-    border-bottom: 1px #000 solid;
+    border-bottom: 3px #000 solid;
 }
 
 #spring-right {  
