@@ -9,8 +9,19 @@
 @font-face {
     font-family: 'Inter', sans-serif;
     src: url("../fonts/Inter-Light-slnt=0.ttf") format('truetype');
+    font-weight: 300;
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
     src: url("../fonts/Inter-Regular-slnt=0.ttf") format('truetype');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Inter', sans-serif;
     src: url("../fonts/Inter-Medium-slnt=0.ttf") format('truetype');
+    font-weight: 500;
 }
 
 @font-face {
@@ -40,10 +51,9 @@ h1 {
 }
 
 h1 a:hover {
-    /* border-bottom: 2px #000 solid; */
-    text-decoration: underline;
+    text-decoration: underline !important;
     text-decoration-color: #000;
-    text-underline-offset: 8px;
+    text-underline-offset: 8px !important;
 }
 
 h2 {
@@ -90,8 +100,7 @@ a {
 
 /* ---------- Buttons ---------- */
 
-#arrow-left,
-#arrow-left-fullscreen {
+#arrow-left {
     display: block;
     margin: auto;
     margin-left: 1.5vw;
@@ -106,8 +115,7 @@ a {
             transform: rotate(225deg);
 }
 
-#arrow-right,
-#arrow-right-fullscreen {
+#arrow-right {
     display: block;
     margin: auto;
     margin-right: 1.5vw;
@@ -122,8 +130,7 @@ a {
             transform: rotate(45deg);
 }
 
-#arrow-left-white,
-#arrow-left-white-fullscreen {
+#arrow-left-white {
     display: block;
     margin: auto;
     margin-left: 1.5vw;
@@ -138,8 +145,7 @@ a {
             transform: rotate(225deg);
 }
 
-#arrow-right-white,
-#arrow-right-white-fullscreen {
+#arrow-right-white {
     display: block;
     margin: auto;
     margin-right: 1.5vw;
@@ -154,8 +160,7 @@ a {
             transform: rotate(45deg);
 }
 
-button, 
-.button-fullscreen {
+button {
     width: 4vw;
     position: fixed;
     border: none;
@@ -166,26 +171,36 @@ button,
     z-index: 3;
 }
 
-#display-left,
-.display-left-fullscreen {
+@-moz-document url-prefix() {
+    button {
+      outline: none !important;  
+    }
+    
+    #display-left {
+        border-right: 0.12rem #000 solid;
+    }
+
+    #display-right {
+        border-left: 0.12rem #000 solid;
+    }
+  }
+
+#display-left {
     left: 0;
     background-color: #FF83EC;
 }
 
-#display-right,
-.display-right-fullscreen {
+#display-right {
     right: 0;
     background-color: #FFF231;
 }
 
-.display-left-black,
-.display-left-black-fullscreen {
+.display-left-black {
     left: 0;
     background-color: #000;
 }
 
-.display-right-black,
-.display-right-black-fullscreen {
+.display-right-black {
     right: 0;
     background-color: #000;
 }
@@ -199,8 +214,7 @@ header,
 .main-three,
 .main-four,
 .dropdown-main-five,
-button, 
-.button-fullscreen {
+button {
     outline: 0.12rem #000 solid;
 }
 
@@ -532,8 +546,7 @@ ol li::before {
 
 #readmore {
     padding: 0;
-    font-size: 1.5em;
+    margin-top: 0.2%;
+    font-size: 1.1em;
     float: right;
-    line-height: 1em;
-    margin-top: 0.5%;
 }
