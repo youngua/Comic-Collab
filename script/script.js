@@ -5,10 +5,7 @@ var mobile = [
     window.matchMedia("(max-width: 2000px)"),
     window.matchMedia("(orientation: landscape)"),
 
-    window.matchMedia("(max-width: 1200px)"),
     window.matchMedia("(orientation: portrait)"),
-
-    window.matchMedia("(max-width: 736px)")
 ]
 
 /* 
@@ -17,9 +14,9 @@ var mobile = [
 function toggleMenu(e) {
     var x = document.getElementById("dropdown-container");
 
-    if (mobile[0].matches && mobile[1].matches || mobile[3].matches) {
+    if (mobile[0].matches && mobile[1].matches || mobile[2].matches) {
 
-        if (!(x.style.display == "grid")) {
+        if (!(x.style.display === "grid")) {
             x.style.display = "grid";
 
             console.log('click 1');
@@ -43,14 +40,13 @@ function toggleMenu(e) {
     }
 }
 
-
 /*
  * Toggles the header dropdown for info session
  */
 $(document).ready(function () {
 
     // triggers the menu dropdown
-    if (mobile[0].matches && mobile[3].matches) {
+    if (mobile[0].matches && mobile[2].matches) {
 
         $(".toggle").hide();
         $(".mobile-nav").click(function () {
@@ -107,6 +103,7 @@ $(window).scroll(function () {
     }
 });
 
+var mobileM = window.matchMedia("(max-width: 736px)");
 
 /*
  * fixed the header when user scroll / for mobile screen sizes
@@ -114,7 +111,7 @@ $(window).scroll(function () {
 $('#dropdown-container').scroll(function () {
 
     if ($('#dropdown-container').scrollTop() > elementPosition.top) {
-        if (mobile[4].matches || mobile[3].matches) {
+        if (mobileM.matches || mobile[2].matches) {
 
             $('header').css({
                 'position': 'fixed',

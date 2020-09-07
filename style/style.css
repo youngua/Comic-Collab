@@ -3,30 +3,28 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Inter';
 }
 
 @font-face {
-    font-family: 'Inter', sans-serif;
-    src: url("../fonts/Inter-Light-slnt=0.ttf") format('truetype');
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Light.ttf') format('truetype'),
+         url('../fonts/Inter-Light.woff') format('woff');
     font-weight: 300;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter', sans-serif;
-    src: url("../fonts/Inter-Regular-slnt=0.ttf") format('truetype');
+    font-family: 'Inter';
+    src: url('../fonts/Inter-Regular.ttf') format('truetype'),
+         url('../fonts/Inter-Regular.woff') format('woff');
     font-weight: 400;
+    font-style: normal;
 }
 
 @font-face {
-    font-family: 'Inter', sans-serif;
-    src: url("../fonts/Inter-Medium-slnt=0.ttf") format('truetype');
-    font-weight: 500;
-}
-
-@font-face {
-    font-family: "Trailmix";
-    src: url("../fonts/TrailMix-Regular.otf") format("opentype");
+    font-family: 'Trailmix';
+    src: url('../fonts/TrailMix-Regular.otf') format('opentype');
     font-weight: normal;
 }
 
@@ -434,6 +432,7 @@ ol li::before {
 .main-five {
     grid-area: main-five;
     height: 80vh;
+    min-height: 500px;
     background-color: #000;
     padding: 4%;
     position: relative;
