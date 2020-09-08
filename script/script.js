@@ -5,7 +5,7 @@ var mobile = [
     window.matchMedia("(max-width: 2000px)"),
     window.matchMedia("(orientation: landscape)"),
 
-    window.matchMedia("(orientation: portrait)"),
+    window.matchMedia("(orientation: portrait)")
 ]
 
 /* 

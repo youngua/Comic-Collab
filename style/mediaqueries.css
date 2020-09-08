@@ -108,8 +108,8 @@
     }
 
     /* ---------- Dropdown ---------- */
-    #dropdown-container {
-        height: 100%;
+    #dropdown-container .main-four {
+        min-height: 80vh;
     }
 
     #readmore {
