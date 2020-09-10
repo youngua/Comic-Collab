@@ -445,7 +445,7 @@ and (orientation: portrait) {
     ol li::before {
         font-size: 1.8em;
     }
-
+    
     /* ---------- Colophon ---------- */
     #colophon-right {
         top: 4%;
