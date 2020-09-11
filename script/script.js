@@ -63,87 +63,19 @@ $(document).ready(function () {
 /*
  * fixed the header when user scroll
  */
-var elementPosition = $('header').offset();
+window.onscroll = function () { myFunction() };
 
-$(window).scroll(function () {
+var menu = document.getElementById("dropdown-container");
+var header = document.getElementById("header");
+var sticky = header.offsetTop;
 
-    if ($(window).scrollTop() > elementPosition.top) {
-        if (mobile[0].matches) {
-
-            $('header').css({
-                'position': 'fixed',
-                'left': '0',
-                'right': '0',
-                'width': '100vw',
-            });
-
-            $('#dialogues-header').css({
-                'position': 'fixed',
-            });
-
-            $('#spring-right').css({
-                'position': 'fixed',
-            });
-
-        }
+function myFunction() {
+    if (window.pageYOffset > sticky || menu.pageYOffset > sticky) {
+        header.classList.add("sticky");
     } else {
-
-        $('header').css({
-            'position': 'static',
-            'width': 'auto',
-        });
-
-        $('#dialogues-header').css({
-            'position': 'fixed',
-        });
-
-        $('#spring-right').css({
-            'position': 'fixed',
-        });
+        header.classList.remove("sticky");
     }
-});
-
-var mobileM = window.matchMedia("(max-width: 736px)");
-
-/*
- * fixed the header when user scroll / for mobile screen sizes
- */
-$('#dropdown-container').scroll(function () {
-
-    if ($('#dropdown-container').scrollTop() > elementPosition.top) {
-        if (mobileM.matches || mobile[2].matches) {
-
-            $('header').css({
-                'position': 'fixed',
-                'left': '0',
-                'right': '0',
-                'width': '100vw',
-            });
-
-            $('#dialogues-header').css({
-                'position': 'fixed',
-            });
-
-            $('#spring-right').css({
-                'position': 'fixed',
-            });
-        }
-    } else {
-
-        $('header').css({
-            'position': 'static',
-            'width': 'auto',
-        });
-
-        $('#dialogues-header').css({
-            'position': 'fixed',
-        });
-
-        $('#spring-right').css({
-            'position': 'fixed',
-        });
-    }
-});
+}
 
 /*
  * Reloads webpage when mobile orientation changes

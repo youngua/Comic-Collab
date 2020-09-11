@@ -213,9 +213,18 @@
     }
 
     /* ---------- Header ---------- */
+    .sticky {
+        width: auto;
+    }
+
+    .container header {
+        z-index: 4;
+    }
+
     header {   
         padding: 0.8vh 2% 1.4vh 2%;
         height: 2vh;
+        width: none;
     }
 
     #dialogues-header {
@@ -407,12 +416,11 @@ and (orientation: portrait) {
     header {   
         height: 3vh;
         padding: 2vh 0;
-        z-index: 3;
     }
 
     button {
         height: 12vh;
-        z-index: 4;
+        z-index: 1;
     }
 
     /* ---------- Container ---------- */
@@ -476,7 +484,7 @@ and (orientation: portrait) {
     /* ---------- dropdown ---------- */
     #dropdown-container {
         height: 100%;
-        z-index: 4;
+        z-index: 3;
     }
 
     .menu-about {

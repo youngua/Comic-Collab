@@ -215,13 +215,20 @@ button {
     outline: 0.12rem #000 solid;
 }
 
+.sticky {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100vw;
+}
+
 header {
     grid-area: header;
     background-color: #F4F4F4;
     padding-top: 1%;
     padding-bottom: 0.5%;
     cursor: pointer;
-    width: 100vw;
     z-index: 2;
     max-height: 10px;
     min-height: 30px;
