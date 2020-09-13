@@ -2,9 +2,7 @@
  * Defines the media queries
  */
 var mobile = [
-    window.matchMedia("(max-width: 2000px)"),
     window.matchMedia("(orientation: landscape)"),
-
     window.matchMedia("(orientation: portrait)")
 ]
 
@@ -14,12 +12,10 @@ var mobile = [
 function toggleMenu(e) {
     var x = document.getElementById("dropdown-container");
 
-    if (mobile[0].matches && mobile[1].matches || mobile[2].matches) {
+    if (mobile[0].matches || mobile[1].matches) {
 
         if (!(x.style.display === "grid")) {
             x.style.display = "grid";
-
-            console.log('click 1');
 
             // disables body from scrolling when menu open
             document.documentElement.style.overflow = 'hidden';
@@ -28,13 +24,10 @@ function toggleMenu(e) {
         } else {
             x.style.display = "none";
 
-            console.log('click 2');
-
             // enable scrolling when menu close
             document.documentElement.style.overflow = 'scroll';
             document.body.scroll = "yes";
         }
-
     } else {
         x.style.display = "none";
     }
@@ -46,7 +39,7 @@ function toggleMenu(e) {
 $(document).ready(function () {
 
     // triggers the menu dropdown
-    if (mobile[0].matches && mobile[2].matches) {
+    if (mobile[1].matches) {
 
         $(".toggle").hide();
         $(".mobile-nav").click(function () {
@@ -63,19 +56,40 @@ $(document).ready(function () {
 /*
  * fixed the header when user scroll
  */
-window.onscroll = function () { myFunction() };
-
-var menu = document.getElementById("dropdown-container");
+var elementPosition = $('header').offset();
 var header = document.getElementById("header");
-var sticky = header.offsetTop;
 
-function myFunction() {
-    if (window.pageYOffset > sticky) {
+$(window).scroll(function () {
+    if ($(window).scrollTop() > elementPosition.top) {
         header.classList.add("sticky");
     } else {
         header.classList.remove("sticky");
     }
-}
+});
+
+/*
+ * fixed the menu header when user scroll for portrait mode
+ */
+$('#dropdown-container').scroll(function () {
+
+    if ($('#dropdown-container').scrollTop() > elementPosition.top) {
+        if (mobile[1].matches) {
+
+            $('header').css({
+                'position': 'fixed',
+                'left': '0',
+                'right': '0',
+                'width': 'auto',
+            });
+        }
+    } else {
+
+        $('header').css({
+            'position': 'static',
+            'width': 'auto',
+        });
+    }
+});
 
 /*
  * Reloads webpage when mobile orientation changes
