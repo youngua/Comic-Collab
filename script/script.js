@@ -68,7 +68,7 @@ $(window).scroll(function () {
 });
 
 /*
- * fixed the menu header when user scroll for portrait mode
+ * header fixed for dropdown menu
  */
 $('#dropdown-container').scroll(function () {
 

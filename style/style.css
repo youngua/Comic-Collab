@@ -517,7 +517,6 @@ ol li::before {
     right: 0;
     left: 0;
     bottom: 0;
-    /* height: 100vh; */
     overflow-y: auto;
     z-index: 1;
     background-color: #F4F4F4;
@@ -555,4 +554,8 @@ ol li::before {
     margin-top: 0.2%;
     font-size: 1.1em;
     float: right;
+}
+
+#dropdown-container .main-four {
+    height: 90vh;
 }

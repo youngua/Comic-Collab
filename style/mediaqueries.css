@@ -420,7 +420,6 @@ and (orientation: portrait) {
 
     button {
         height: 12vh;
-        z-index: 1;
     }
 
     /* ---------- Container ---------- */
